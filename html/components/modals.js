@@ -27,7 +27,7 @@ const isWaitModal = (modal) =>
 
 // Hide the modal, mask, remove aria-hidden on main and send focus back
 const hideModal = (modal, mask, main) => {
-  const isHidden = modal.classList.contains('sprk-u-Display--none');
+  const isHidden = modal.classList.contains('sprk-c-Modal--is-hidden');
   // Grab value of modal data-attr to get the trigger's corresponding modal name
   const modalName = modal.getAttribute('data-sprk-modal');
   // Grab modal trigger so it can be focused once modal is closed
@@ -36,8 +36,8 @@ const hideModal = (modal, mask, main) => {
   );
   // If modal is hidden already or there are no mask and main els then exit
   if (isHidden || mask === null || main === null) return;
-  modal.classList.add('sprk-u-Display--none');
-  mask.classList.add('sprk-u-Display--none');
+  modal.classList.add('sprk-c-Modal--is-hidden');
+  mask.classList.add('sprk-c-ModalMask--is-hidden');
   // Remove the hidden aria attr from main content
   main.removeAttribute('aria-hidden');
   // Remove overflow hidden to allow scrolling again
@@ -53,7 +53,7 @@ const currentOpenModal = (modalsList) => {
   let openModalEl;
   // Loop through modals to find open modal
   modalsList.forEach((modalEl) => {
-    const isHidden = modalEl.classList.contains('sprk-u-Display--none');
+    const isHidden = modalEl.classList.contains('sprk-c-Modal--is-hidden');
     if (!isHidden) openModalEl = modalEl;
   });
   return openModalEl;
@@ -109,15 +109,15 @@ const handleModalKeyEvents = (modalsList, mask, main, e) => {
 
 // Show the modal, mask and set aria-hidden=true on body
 const showModal = (modal, mask, main) => {
-  const isHidden = modal.classList.contains('sprk-u-Display--none');
+  const isHidden = modal.classList.contains('sprk-c-Modal--is-hidden');
   const focusableEls = getFocusableEls(modal);
 
   // If the modal is shown already or there are no mask and main els then exit
   if (!isHidden || mask === null || main === null) return;
 
   // Show modal and mask
-  modal.classList.remove('sprk-u-Display--none');
-  mask.classList.remove('sprk-u-Display--none');
+  modal.classList.remove('sprk-c-Modal--is-hidden');
+  mask.classList.remove('sprk-c-ModalMask--is-hidden');
 
   // Alert assistive devices that main content is hidden
   main.setAttribute('aria-hidden', 'true');

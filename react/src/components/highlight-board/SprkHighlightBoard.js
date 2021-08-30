@@ -39,7 +39,6 @@ const SprkHighlightBoard = (props) => {
 
   const classNames = classnames(
     'sprk-c-HighlightBoard',
-    'sprk-u-mbm',
     additionalClasses,
     { 'sprk-c-HighlightBoard--has-image': imgSrc },
     { 'sprk-c-HighlightBoard--stacked': variant === 'stacked' },

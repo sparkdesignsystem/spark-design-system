@@ -1,6 +1,15 @@
   {
     "toggle": {
       "trigger": {
+        "icon-margin": {
+          "comment": "The default margin on the icon inside the Toggle trigger.",
+          "value": "0 {space.s.value} 0 0",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
         "border": {
           "top": {
             "comment": "The top border style for Toggle Trigger.",
@@ -150,6 +159,28 @@
         "value": "{toggle.trigger.hover.color.value}",
         "file": "settings",
         "themable": true
+      },
+      "content": {
+        "padding": {
+          "top": {
+            "comment": "The padding top for the content in the Toggle.",
+            "value": "{space.s.value}",
+            "attributes": {
+              "category": "size"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "bottom": {
+            "comment": "The padding bottom for the content in the Toggle.",
+            "value": "{space.s.value}",
+            "attributes": {
+              "category": "size"
+            },
+            "file": "settings",
+            "themable": true
+          }
+        }
       },
       "transition-timing": {
         "comment": "The transition timing for the rotation of the icon when the Toggle is opened.",

@@ -39,7 +39,7 @@ const DevDocLinks = (props) => {
           <SprkListItem>
             <SprkLink
               variant="has-icon"
-              href={`https://html.sparkdesignsystem.com/?path=/story/${componentType}-${componentName}`}
+              href={`https://html.sparkdesignsystem.com/?path=/docs/${componentType}-${componentName}`}
               target="_blank"
             >
               HTML
@@ -58,7 +58,7 @@ const DevDocLinks = (props) => {
           <SprkListItem>
             <SprkLink
               variant="has-icon"
-              href={`https://react.sparkdesignsystem.com/?path=/story/${componentType}-${componentName}`}
+              href={`https://react.sparkdesignsystem.com/?path=/docs/${componentType}-${componentName}`}
               target="_blank"
             >
               React
@@ -77,7 +77,7 @@ const DevDocLinks = (props) => {
           <SprkListItem>
             <SprkLink
               variant="has-icon"
-              href={`https://angular.sparkdesignsystem.com/?path=/story/${componentType}-${componentName}`}
+              href={`https://angular.sparkdesignsystem.com/?path=/docs/${componentType}-${componentName}`}
               target="_blank"
             >
               Angular

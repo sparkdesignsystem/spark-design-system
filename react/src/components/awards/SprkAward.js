@@ -32,7 +32,8 @@ const SprkAward = (props) => {
           sprk-b-TypeDisplayFive
           sprk-b-Measure
           sprk-b-Measure--narrow
-          sprk-u-TextAlign--center"
+          sprk-b-Type--center
+        "
       >
         {heading}
       </h2>
@@ -88,7 +89,7 @@ const SprkAward = (props) => {
           analyticsString={disclaimerAnalytics}
           additionalClasses="sprk-o-Stack__item"
         >
-          <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
+          <p className="sprk-b-TypeBodyFour">
             {disclaimerText}
           </p>
         </SprkToggle>

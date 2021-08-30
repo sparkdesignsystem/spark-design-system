@@ -1,24 +1,35 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAccordionModule } from './sprk-accordion.module';
 import { SprkAccordionItemModule } from '../sprk-accordion-item/sprk-accordion-item.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAccordionComponent } from './sprk-accordion.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { SprkAccordionItemComponent } from '../sprk-accordion-item/sprk-accordion-item.component';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta } from '@storybook/angular';
 
 export default {
   title: 'Components/Accordion',
   component: SprkAccordionComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
-    ),
+    moduleMetadata({
+      imports: [
+        SprkAccordionModule,
+        SprkAccordionItemModule,
+        BrowserAnimationsModule,
+      ],
+    }),
   ],
   parameters: {
     subcomponents: {
       SprkAccordionItemComponent,
     },
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('accordion')}
 - The Accordion component in spark-angular consists of two Angular components:
     - \`sprk-accordion\`
@@ -29,26 +40,18 @@ components as children. Any other content you add outside of a
 - If your instance only has one item,
 consider using
 the [Toggle Component](/docs/components-toggle--default-story) instead.
-`,
-    docs: { iframeHeight: 420 },
+        `,
+      },
+      iframeHeight: 420,
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkAccordionModule,
-    SprkAccordionItemModule,
-    BrowserAnimationsModule,
-  ],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-accordion>
       <sprk-accordion-item
         heading="This is an accordion heading"
-        additionalClasses="sprk-u-mbs"
         idString="accordion-item-1"
         analyticsString="object.action.event"
       >
@@ -89,9 +92,8 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-accordion.component', 'sprk-accordion-item.component'],
-  },
+defaultStory.parameters = {
+  jest: ['sprk-accordion.component', 'sprk-accordion-item.component'],
 };
+
+defaultStory.storyName = 'Default';

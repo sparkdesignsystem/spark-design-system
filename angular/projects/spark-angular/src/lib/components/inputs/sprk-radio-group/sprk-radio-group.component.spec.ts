@@ -21,13 +21,15 @@ import { SprkFieldsetDirective } from '../../../directives/inputs/sprk-fieldset/
           <input type="radio" sprkRadioInput />
           <label sprkRadioLabel>Item 1</label>
         </sprk-radio-item>
-        <p sprkHelperText>Helper Text!</p>
+        <p sprkHelperText>
+          Optional helper text, used to clarify the field's intent.
+        </p>
       </fieldset>
       <span sprkFieldError>Error Message!</span>
     </sprk-radio-group>
   `,
 })
-class TestComponent { }
+class TestComponent {}
 
 @Component({
   selector: 'sprk-test-2',
@@ -37,12 +39,14 @@ class TestComponent { }
         <input type="radio" sprkRadioInput />
         <label sprkRadioLabel>Item 1</label>
       </sprk-radio-item>
-      <p sprkHelperText>Helper Text!</p>
+      <p sprkHelperText>
+        Optional helper text, used to clarify the field's intent.
+      </p>
       <span sprkFieldError id="foo">Error Message!</span>
     </sprk-radio-group>
   `,
 })
-class Test2Component { }
+class Test2Component {}
 
 describe('SprkRadioGroupComponent', () => {
   let component: TestComponent;

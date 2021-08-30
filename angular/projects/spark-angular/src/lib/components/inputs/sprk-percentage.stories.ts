@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
@@ -11,6 +13,7 @@ import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-inpu
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Percentage',
@@ -22,13 +25,23 @@ export default {
     SprkFieldErrorDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
-          <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
-          </form>
-        <div>`,
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkInputModule,
+        SprkIconModule,
+        SprkFieldErrorModule,
+        SprkIconInputContainerModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `
+        <form (submit)="onSubmit($event)" #sampleForm="ngForm">
+          ${story}
+        </form>
+      `,
     ),
   ],
   props: {
@@ -37,26 +50,18 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
     `,
-    docs: { iframeHeight: 200 },
+      },
+      iframeHeight: 200,
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkInputModule,
-    SprkIconModule,
-    SprkFieldErrorModule,
-    SprkIconInputContainerModule,
-  ],
-};
+} as Meta;
 
 export const percentageInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="
@@ -82,19 +87,17 @@ export const percentageInput = () => ({
   `,
 });
 
-percentageInput.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+percentageInput.storyName = 'Default';
+
+percentageInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidPercentageInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="
@@ -130,20 +133,18 @@ export const invalidPercentageInput = () => ({
   `,
 });
 
-invalidPercentageInput.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidPercentageInput.storyName = 'Invalid';
+
+invalidPercentageInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledPercentageInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="
@@ -170,19 +171,17 @@ export const disabledPercentageInput = () => ({
   `,
 });
 
-disabledPercentageInput.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledPercentageInput.storyName = 'Disabled';
+
+disabledPercentageInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
       <label for="legacy-percentage" sprkLabel>Percentage</label>
@@ -203,19 +202,17 @@ export const legacyStory = () => ({
   `,
 });
 
-legacyStory.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyStory.storyName = 'Legacy (Deprecated)';
+
+legacyStory.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyInvalidPercentageInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
       <label for="legacy-invalid-percentage" sprkLabel>Percentage</label>
@@ -246,20 +243,18 @@ export const legacyInvalidPercentageInput = () => ({
   `,
 });
 
-legacyInvalidPercentageInput.story = {
-  name: 'Legacy Invalid (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidPercentageInput.storyName = 'Legacy Invalid (Deprecated)';
+
+legacyInvalidPercentageInput.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledPercentageInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
       <label
@@ -287,13 +282,12 @@ export const legacyDisabledPercentageInput = () => ({
   `,
 });
 
-legacyDisabledPercentageInput.story = {
-  name: 'Legacy Disabled (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyDisabledPercentageInput.storyName = 'Legacy Disabled (Deprecated)';
+
+legacyDisabledPercentageInput.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };

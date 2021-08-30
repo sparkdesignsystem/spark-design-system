@@ -39,7 +39,7 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
             [iconName]="triggerIconName"
-            additionalClasses="sprk-Stack__item sprk-u-mhs"
+            additionalClasses="sprk-Stack__item sprk-c-Masthead__selector-icon"
           ></sprk-icon>
         </a>
       </div>

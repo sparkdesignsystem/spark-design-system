@@ -44,7 +44,7 @@ describe('SprkAccordionItemComponent', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(accordionItemElement.classList.toString()).toContain(
-      'sprk-c-Accordion__item sprk-u-Overflow--hidden sprk-u-man',
+      'sprk-c-Accordion__item sprk-u-man',
     );
   });
 

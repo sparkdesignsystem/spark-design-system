@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkSelectDirective } from '../../directives/inputs/sprk-select/sprk-select.directive';
@@ -13,6 +15,7 @@ import { SprkSelectModule } from '../../directives/inputs/sprk-select/sprk-selec
 import { SprkHugeInputContainerModule } from './sprk-huge-input-container/sprk-huge-input-container.module';
 import { SprkHugeInputContainerComponent } from './sprk-huge-input-container/sprk-huge-input-container.component';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Select',
@@ -25,13 +28,25 @@ export default {
     SprkHugeInputContainerComponent,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
-          <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
-          </form>
-        <div>`,
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkIconModule,
+        SprkSelectModule,
+        SprkFieldErrorModule,
+        SprkHugeInputContainerModule,
+        SprkFieldErrorModule,
+        SprkInputModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `
+        <form (submit)="onSubmit($event)" #sampleForm="ngForm">
+          ${story}
+        </form>
+      `,
     ),
   ],
   props: {
@@ -40,28 +55,18 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
     `,
-    docs: { iframeHeight: 200 },
+      },
+      iframeHeight: 200,
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkIconModule,
-    SprkSelectModule,
-    SprkFieldErrorModule,
-    SprkHugeInputContainerModule,
-    SprkFieldErrorModule,
-    SprkInputModule,
-  ],
-};
+} as Meta;
 
 export const selectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label sprkLabel for="select-normal-1">Select Box Label</label>
@@ -90,19 +95,17 @@ export const selectBox = () => ({
   `,
 });
 
-selectBox.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-select.directive',
-      'sprk-label.directive',
-    ],
-  },
+selectBox.storyName = 'Default';
+
+selectBox.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-select.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label sprkLabel for="select-error-1">Select Box Label</label>
@@ -142,19 +145,17 @@ export const invalidSelectBox = () => ({
   `,
 });
 
-invalidSelectBox.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-select.directive',
-      'sprk-label.directive',
-    ],
-  },
+invalidSelectBox.storyName = 'Invalid';
+
+invalidSelectBox.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-select.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const disabledSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label isDisabled="true" sprkLabel for="select-normal-1">Select Box Label</label>
@@ -184,19 +185,17 @@ export const disabledSelectBox = () => ({
   `,
 });
 
-disabledSelectBox.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-select.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledSelectBox.storyName = 'Disabled';
+
+disabledSelectBox.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-select.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const hugeSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container variant="huge">
       <select
@@ -231,19 +230,17 @@ export const hugeSelectBox = () => ({
   `,
 });
 
-hugeSelectBox.story = {
-  name: 'Huge',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-select.directive',
-      'sprk-label.directive',
-    ],
-  },
+hugeSelectBox.storyName = 'Huge';
+
+hugeSelectBox.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-select.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidHugeSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container variant="huge">
       <select
@@ -289,20 +286,18 @@ export const invalidHugeSelectBox = () => ({
   `,
 });
 
-invalidHugeSelectBox.story = {
-  name: 'Huge Invalid',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-select.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidHugeSelectBox.storyName = 'Huge Invalid';
+
+invalidHugeSelectBox.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-select.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledHugeSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container variant="huge">
       <select
@@ -338,19 +333,17 @@ export const disabledHugeSelectBox = () => ({
   `,
 });
 
-disabledHugeSelectBox.story = {
-  name: 'Huge Disabled',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-select.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledHugeSelectBox.storyName = 'Huge Disabled';
+
+disabledHugeSelectBox.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-select.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyHugeSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
       <select
@@ -384,19 +377,17 @@ export const legacyHugeSelectBox = () => ({
   `,
 });
 
-legacyHugeSelectBox.story = {
-  name: 'Legacy Huge (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-huge-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyHugeSelectBox.storyName = 'Legacy Huge (Deprecated)';
+
+legacyHugeSelectBox.parameters = {
+  jest: [
+    'sprk-huge-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyInvalidHugeSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
       <select
@@ -441,20 +432,18 @@ export const legacyInvalidHugeSelectBox = () => ({
   `,
 });
 
-legacyInvalidHugeSelectBox.story = {
-  name: 'Legacy Huge Invalid (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-huge-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidHugeSelectBox.storyName = 'Legacy Huge Invalid (Deprecated)';
+
+legacyInvalidHugeSelectBox.parameters = {
+  jest: [
+    'sprk-huge-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledHugeSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
       <select
@@ -489,13 +478,12 @@ export const legacyDisabledHugeSelectBox = () => ({
   `,
 });
 
-legacyDisabledHugeSelectBox.story = {
-  name: 'Legacy Huge Disabled (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-huge-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyDisabledHugeSelectBox.storyName = 'Legacy Huge Disabled (Deprecated)';
+
+legacyDisabledHugeSelectBox.parameters = {
+  jest: [
+    'sprk-huge-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };

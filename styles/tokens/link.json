@@ -9,6 +9,15 @@
       "file": "settings",
       "themable": true
     },
+    "icon-margin": {
+      "comment": "The default margin on icons inside Links.",
+      "value": "0 {space.s.value} 0 0",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "color": {
       "comment": "The default color on Links.",
       "value": "{purple.value}",

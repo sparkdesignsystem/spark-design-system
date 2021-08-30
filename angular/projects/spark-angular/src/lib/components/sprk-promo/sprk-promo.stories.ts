@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta } from '@storybook/angular';
 import { SprkPromoModule } from './sprk-promo.module';
 import { SprkPromoComponent } from './sprk-promo.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -9,31 +11,33 @@ export default {
   title: 'Components/Promo',
   component: SprkPromoComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
-    ),
+    moduleMetadata({
+      imports: [
+        SprkPromoModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkPromoComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
   ],
   parameters: {
-    info: `${markdownDocumentationLinkBuilder('promo')}`,
-    docs: { iframeHeight: 430 },
-  },
-};
-
-const modules = {
-  imports: [
-    SprkPromoModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkPromoComponent,
+    docs: {
+      source: {
+        type: 'code',
       },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+      iframeHeight: 430,
+      description: {
+        component: `${markdownDocumentationLinkBuilder('promo')}`,
+      },
+    },
+  },
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-promo idString="default-promo" hasBorder="true">
       <div sprkStackItem sprkPromoContent>
@@ -74,15 +78,13 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-promo.component'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-promo.component'],
 };
 
 export const flag = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-promo idString="flag-promo" hasBorder="true" isFlag="true" additionalClasses="sprk-o-Stack--split@s">
       <a href="#nogo" sprkStackItem class="sprk-o-Stack__item--fourth@s">
@@ -109,15 +111,12 @@ export const flag = () => ({
   `,
 });
 
-flag.story = {
-  parameters: {
-    docs: { iframeHeight: 300 },
-    jest: ['sprk-promo.component'],
-  },
+flag.parameters = {
+  docs: { iframeHeight: 300 },
+  jest: ['sprk-promo.component'],
 };
 
 export const withImage = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-promo idString="image-promo" hasBorder="true" additionalClasses="sprk-o-Stack--split@s">
       <a href="#nogo" sprkStackItem class="sprk-o-Stack__item--half@s">
@@ -166,14 +165,11 @@ export const withImage = () => ({
   `,
 });
 
-withImage.story = {
-  parameters: {
-    jest: ['sprk-promo.component'],
-  },
+withImage.parameters = {
+  jest: ['sprk-promo.component'],
 };
 
 export const withReversedImage = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-promo idString="rev-image-promo" hasBorder="true" additionalClasses="sprk-o-Stack--split@s">
       <div sprkStackItem sprkPromoContent class="sprk-o-Stack__item--half@s">
@@ -222,8 +218,6 @@ export const withReversedImage = () => ({
   `,
 });
 
-withReversedImage.story = {
-  parameters: {
-    jest: ['sprk-promo.component'],
-  },
+withReversedImage.parameters = {
+  jest: ['sprk-promo.component'],
 };

@@ -1,11 +1,11 @@
 {
-  "typography":{
+  "typography": {
     "breakpoint": {
       "comment": "The breakpoint used for typography.",
       "value": "54rem",
       "attributes": {
-          "category": "size"
-        },
+        "category": "size"
+      },
       "file": "typography",
       "themable": true
     }
@@ -101,7 +101,7 @@
       "display": {
         "one": {
           "comment": "The font-family, including fallbacks of TypeDisplayOne.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansBold, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -110,7 +110,7 @@
         },
         "two": {
           "comment": "The font-family, including fallbacks of TypeDisplayTwo.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansBold, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -119,7 +119,7 @@
         },
         "three": {
           "comment": "The font-family, including fallbacks of TypeDisplayThree.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansLight, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -128,7 +128,7 @@
         },
         "four": {
           "comment": "The font-family, including fallbacks of TypeDisplayFour.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansBold, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -137,7 +137,7 @@
         },
         "five": {
           "comment": "The font-family, including fallbacks of TypeDisplayFive.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansMedium, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -146,7 +146,7 @@
         },
         "six": {
           "comment": "The font-family, including fallbacks of TypeDisplaySix.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansLight, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -166,7 +166,7 @@
       "body": {
         "one": {
           "comment": "The font-family, including fallbacks of TypeBodyOne.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansMedium, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -175,7 +175,7 @@
         },
         "two": {
           "comment": "The font-family, including fallbacks of TypeBodyTwo.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansLight, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -184,7 +184,7 @@
         },
         "three": {
           "comment": "The font-family, including fallbacks of TypeBodyThree.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansLight, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -193,7 +193,7 @@
         },
         "four": {
           "comment": "The font-family, including fallbacks of TypeBodyFour.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansLight, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -206,7 +206,7 @@
       "display": {
         "one": {
           "comment": "The size of TypeDisplayOne when the viewport is narrower than $sprk-font-size-display-one-breakpoint.",
-          "value": "2.75rem",
+          "value": "2.5rem",
           "attributes": {
             "category": "size",
             "type": "font"
@@ -216,7 +216,7 @@
         },
         "one-wide": {
           "comment": "The size of TypeDisplayOne when the viewport is wider than $sprk-font-size-display-one-breakpoint.",
-          "value": "2.75rem",
+          "value": "3.375rem",
           "file": "typography",
           "attributes": {
             "category": "size",
@@ -265,7 +265,17 @@
           "themable": true
         },
         "four": {
-          "comment": "The size of TypeDisplayFour.",
+          "comment": "The size of TypeDisplayFour when the viewport is narrower than $sprk-font-size-display-four-breakpoint.",
+          "value": "1.5rem",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "file": "typography",
+          "themable": true
+        },
+        "four-wide": {
+          "comment": "The size of TypeDisplayFour when the viewport is wider than $sprk-font-size-display-four-breakpoint.",
           "value": "1.625rem",
           "attributes": {
             "category": "size",
@@ -275,7 +285,17 @@
           "themable": true
         },
         "five": {
-          "comment": "The size of TypeDisplayFive.",
+          "comment": "The size of TypeDisplayFive when the viewport is narrower than $sprk-font-size-display-five-breakpoint.",
+          "value": "1.25rem",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "file": "typography",
+          "themable": true
+        },
+        "five-wide": {
+          "comment": "The size of TypeDisplayFive when the viewport is wider than $sprk-font-size-display-five-breakpoint.",
           "value": "1.25rem",
           "attributes": {
             "category": "size",
@@ -285,7 +305,17 @@
           "themable": true
         },
         "six": {
-          "comment": "The size of TypeDisplaySix.",
+          "comment": "The size of TypeDisplaySix when the viewport is narrower than $sprk-font-size-display-six-breakpoint.",
+          "value": "1.25rem",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "file": "typography",
+          "themable": true
+        },
+        "six-wide": {
+          "comment": "The size of TypeDisplaySix when the viewport is wider than $sprk-font-size-display-six-breakpoint.",
           "value": "1.25rem",
           "attributes": {
             "category": "size",
@@ -295,7 +325,17 @@
           "themable": true
         },
         "seven": {
-          "comment": "The size of TypeDisplaySeven.",
+          "comment": "The size of TypeDisplaySeven when the viewport is narrower than $sprk-font-size-display-seven-breakpoint.",
+          "value": "1rem",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "file": "typography",
+          "themable": true
+        },
+        "seven-wide": {
+          "comment": "The size of TypeDisplaySeven when the viewport is wider than $sprk-font-size-display-seven-breakpoint.",
           "value": "1rem",
           "attributes": {
             "category": "size",
@@ -307,7 +347,17 @@
       },
       "body": {
         "one": {
-          "comment": "The size of TypeBodyOne.",
+          "comment": "The size of TypeBodyOne when the viewport is narrower than $sprk-font-size-body-one-breakpoint.",
+          "value": "1rem",
+          "file": "typography",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "themable": true
+        },
+        "one-wide": {
+          "comment": "The size of TypeBodyOne when the viewport is wider than $sprk-font-size-body-one-breakpoint.",
           "value": "1rem",
           "file": "typography",
           "attributes": {
@@ -317,7 +367,17 @@
           "themable": true
         },
         "two": {
-          "comment": "The size of TypeBodyTwo.",
+          "comment": "The size of TypeBodyTwo when the viewport is narrower than $sprk-font-size-body-two-breakpoint.",
+          "value": "1rem",
+          "file": "typography",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "themable": true
+        },
+        "two-wide": {
+          "comment": "The size of TypeBodyTwo when the viewport is wider than $sprk-font-size-body-two-breakpoint.",
           "value": "1rem",
           "file": "typography",
           "attributes": {
@@ -327,8 +387,18 @@
           "themable": true
         },
         "three": {
-          "comment": "The font size of TypeBodyThree.",
-          "value": "1rem",
+          "comment": "The font size of TypeBodyThree when the viewport is narrower than $sprk-font-size-body-three-breakpoint.",
+          "value": "0.875rem",
+          "file": "typography",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "themable": true
+        },
+        "three-wide": {
+          "comment": "The size of TypeBodyThree when the viewport is wider than $sprk-font-size-body-three-breakpoint.",
+          "value": "0.875rem",
           "file": "typography",
           "attributes": {
             "category": "size",
@@ -337,8 +407,18 @@
           "themable": true
         },
         "four": {
-          "comment": "The font size of TypeBodyFour.",
-          "value": "0.8125rem",
+          "comment": "The font size of TypeBodyFour when the viewport is narrower than $sprk-font-size-body-four-breakpoint.",
+          "value": "0.813rem",
+          "file": "typography",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "themable": true
+        },
+        "four-wide": {
+          "comment": "The size of TypeBodyFour when the viewport is wider than $sprk-font-size-body-four-breakpoint.",
+          "value": "0.813rem",
           "file": "typography",
           "attributes": {
             "category": "size",
@@ -352,7 +432,7 @@
       "display": {
         "one": {
           "comment": "The weight of the TypeDisplayOne font.",
-          "value": "bold",
+          "value": "700",
           "attributes": {
             "category": "content"
           },
@@ -361,7 +441,7 @@
         },
         "two": {
           "comment": "The weight of the TypeDisplayTwo font.",
-          "value": "bold",
+          "value": "700",
           "attributes": {
             "category": "content"
           },
@@ -376,7 +456,7 @@
         },
         "four": {
           "comment": "The weight of the TypeDisplayFour font.",
-          "value": "bold",
+          "value": "700",
           "attributes": {
             "category": "content"
           },
@@ -391,13 +471,13 @@
         },
         "six": {
           "comment": "The weight of the TypeDisplaySix font.",
-          "value": "300",
+          "value": "500",
           "file": "typography",
           "themable": true
         },
         "seven": {
           "comment": "The weight of the TypeDisplaySeven font.",
-          "value": "500",
+          "value": "700",
           "file": "typography",
           "themable": true
         }
@@ -411,7 +491,7 @@
         },
         "two": {
           "comment": "The weight of the TypeBodyTwo font.",
-          "value": "300",
+          "value": "500",
           "file": "typography",
           "themable": true
         },
@@ -548,7 +628,7 @@
     "display": {
       "one": {
         "comment": "The line-height of the TypeDisplayOne font when the viewport is narrower than $sprk-font-size-display-one-breakpoint.",
-        "value": "1.27",
+        "value": "2.75rem",
         "attributes": {
           "category": "size"
         },
@@ -557,13 +637,13 @@
       },
       "one-wide": {
         "comment": "The line-height of the TypeDisplayOne font when the viewport is wider than $sprk-font-size-display-one-breakpoint.",
-        "value": "1.03",
+        "value": "3.75rem",
         "file": "typography",
         "themable": true
       },
       "two": {
         "comment": "The line-height of the TypeDisplayTwo font when the viewport is narrower than $sprk-font-size-display-two-breakpoint.",
-        "value": "1",
+        "value": "2.25rem",
         "attributes": {
           "category": "size"
         },
@@ -572,7 +652,7 @@
       },
       "two-wide": {
         "comment": "The line-height of the TypeDisplayTwo font when the viewport is wider than $sprk-font-size-display-two-breakpoint.",
-        "value": "1",
+        "value": "3rem",
         "attributes": {
           "category": "size"
         },
@@ -581,7 +661,7 @@
       },
       "three": {
         "comment": "The line-height of the TypeDisplayThree font when the viewport is narrower than $sprk-font-size-display-three-breakpoint.",
-        "value": "1.6",
+        "value": "2.25rem",
         "attributes": {
           "category": "size"
         },
@@ -590,7 +670,7 @@
       },
       "three-wide": {
         "comment": "The line-height of the TypeDisplayThree font when the viewport is wider than $sprk-font-size-display-three-breakpoint.",
-        "value": "1.32",
+        "value": "2.75rem",
         "attributes": {
           "category": "size"
         },
@@ -598,8 +678,17 @@
         "themable": true
       },
       "four": {
-        "comment": "The line-height of the TypeDisplayFour.",
-        "value": "1.23",
+        "comment": "The line-height of the TypeDisplayFour font when the viewport is narrower than $sprk-font-size-display-four-breakpoint.",
+        "value": "2rem",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "typography",
+        "themable": true
+      },
+      "four-wide": {
+        "comment": "The line-height of the TypeDisplayFour font when the viewport is wider than $sprk-font-size-display-four-breakpoint.",
+        "value": "2rem",
         "attributes": {
           "category": "size"
         },
@@ -607,8 +696,17 @@
         "themable": true
       },
       "five": {
-        "comment": "The line-height of the TypeDisplayFive.",
-        "value": "1.2",
+        "comment": "The line-height of the TypeDisplayFive font when the viewport is narrower than $sprk-font-size-display-five-breakpoint.",
+        "value": "1.625rem",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "typography",
+        "themable": true
+      },
+      "five-wide": {
+        "comment": "The line-height of the TypeDisplayFive font when the viewport is wider than $sprk-font-size-display-five-breakpoint.",
+        "value": "1.625rem",
         "attributes": {
           "category": "size"
         },
@@ -616,53 +714,95 @@
         "themable": true
       },
       "six": {
-        "comment": "The line-height of the TypeDisplaySix.",
-        "value": "1.2",
+        "comment": "The line-height of the TypeDisplaySix font when the viewport is narrower than $sprk-font-size-display-six-breakpoint.",
+        "value": "1.5rem",
+        "file": "typography",
+        "themable": true
+      },
+      "six-wide": {
+        "comment": "The line-height of the TypeDisplaySix font when the viewport is wider than $sprk-font-size-display-six-breakpoint.",
+        "value": "1.5rem",
+        "attributes": {
+          "category": "size"
+        },
         "file": "typography",
         "themable": true
       },
       "seven": {
-        "comment": "The line-height of the TypeDisplaySeven.",
-        "value": "1",
+        "comment": "The line-height of the TypeDisplaySeven font when the viewport is narrower than $sprk-font-size-display-seven-breakpoint.",
+        "value": "1.375rem",
+        "file": "typography",
+        "themable": true
+      },
+      "seven-wide": {
+        "comment": "The line-height of the TypeDisplaySeven font when the viewport is wider than $sprk-font-size-display-seven-breakpoint.",
+        "value": "1.25rem",
+        "attributes": {
+          "category": "size"
+        },
         "file": "typography",
         "themable": true
       }
     },
     "body": {
       "one": {
-        "comment": "The line-height of the TypeBodyOne.",
-        "value": "1.6",
+        "comment": "The line-height of the TypeBodyOne font when the viewport is narrower than $sprk-font-size-body-one-breakpoint.",
+        "value": "1.5rem",
         "attributes": {
           "category": "size"
         },
+        "file": "typography",
+        "themable": true
+      },
+      "one-wide": {
+        "comment": "The line-height of the TypeBodyOne font when the viewport is wider than $sprk-font-size-body-one-breakpoint.",
+        "value": "1.5rem",
         "file": "typography",
         "themable": true
       },
       "two": {
-        "comment": "The line-height of the TypeBodyTwo.",
-        "value": "1.6",
+        "comment": "The line-height of the TypeBodyTwo font when the viewport is narrower than $sprk-font-size-body-two-breakpoint.",
+        "value": "1.5rem",
         "attributes": {
           "category": "size"
         },
+        "file": "typography",
+        "themable": true
+      },
+      "two-wide": {
+        "comment": "The line-height of the TypeBodyTwo font when the viewport is wider than $sprk-font-size-body-two-breakpoint.",
+        "value": "1.5rem",
         "file": "typography",
         "themable": true
       },
       "three": {
-        "comment": "The line-height of the TypeBodyThree.",
-        "value": "2",
+        "comment": "The line-height of the TypeBodyThree font when the viewport is narrower than $sprk-font-size-body-three-breakpoint.",
+        "value": "1.25rem",
         "file": "typography",
         "attributes": {
           "category": "size"
         },
         "themable": true
       },
+      "three-wide": {
+        "comment": "The line-height of the TypeBodyThree font when the viewport is wider than $sprk-font-size-body-three-breakpoint.",
+        "value": "1.25rem",
+        "file": "typography",
+        "themable": true
+      },
       "four": {
-        "comment": "The line-height of the TypeBodyFour.",
-        "value": "1.84",
+        "comment": "The line-height of the TypeBodyFour font when the viewport is narrower than $sprk-font-size-body-four-breakpoint.",
+        "value": "1.25rem",
         "file": "typography",
         "attributes": {
           "category": "size"
         },
+        "themable": true
+      },
+      "four-wide": {
+        "comment": "The line-height of the TypeBodyFour font when the viewport is wider than $sprk-font-size-body-four-breakpoint.",
+        "value": "1.25rem",
+        "file": "typography",
         "themable": true
       }
     },
@@ -687,11 +827,38 @@
       }
     }
   },
-  "type-display": {
-    "one": {
-      "breakpoint": {
-        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-one to $sprk-font-size-display-one-wide.",
-        "value": "43.75rem",
+  "type": {
+    "right": {
+      "comment": "The text align right value.",
+      "value": "right",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "typography",
+      "themable": true
+    },
+    "crop-none": {
+      "content": {
+        "comment": "The content value for the crop none helper class.",
+        "value": "none",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "typography",
+        "themable": true
+      },
+      "margin-bottom": {
+        "comment": "The margin bottom value for the crop none helper class.",
+        "value": "0",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "typography",
+        "themable": true
+      },
+      "margin-top": {
+        "comment": "The margin top value for the crop none helper class.",
+        "value": "0",
         "attributes": {
           "category": "size"
         },
@@ -699,26 +866,147 @@
         "themable": true
       }
     },
-    "two": {
-      "breakpoint": {
-        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-two to $sprk-font-size-display-two-wide.",
-        "value": "43.75rem",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "typography",
-        "themable": true
+    "left": {
+      "comment": "The text align left value.",
+      "value": "left",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "typography",
+      "themable": true
+    },
+    "center": {
+      "comment": "The text align center value.",
+      "value": "center",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "typography",
+      "themable": true
+    },
+    "display": {
+      "one": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-one to $sprk-font-size-display-one-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "two": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-two to $sprk-font-size-display-two-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "three": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-three to $sprk-font-size-display-three-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "four": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-four to $sprk-font-size-display-four-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "five": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-five to $sprk-font-size-display-five-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "six": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-six to $sprk-font-size-display-six-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "seven": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-seven to $sprk-font-size-display-seven-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
       }
     },
-    "three": {
-      "breakpoint": {
-        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-three to $sprk-font-size-display-three-wide.",
-        "value": "43.75rem",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "typography",
-        "themable": true
+    "body": {
+      "one": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-body-one to $sprk-font-size-body-one-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "two": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-body-two to $sprk-font-size-body-two-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "three": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-body-three to $sprk-font-size-body-three-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "four": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-body-four to $sprk-font-size-body-four-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
       }
     }
   }

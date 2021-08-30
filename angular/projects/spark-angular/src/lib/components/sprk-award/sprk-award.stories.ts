@@ -1,42 +1,44 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAwardModule } from './sprk-award.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { SprkAwardComponent } from './sprk-award.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta } from '@storybook/angular';
 export default {
   title: 'Components/Award',
   component: SprkAwardComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box sprk-o-CenteredColumn">${storyContent}<div>`,
-    ),
+    moduleMetadata({
+      imports: [
+        SprkAwardModule,
+        BrowserAnimationsModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkAwardComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
   ],
   parameters: {
-    info: `${markdownDocumentationLinkBuilder('award')}`,
-    docs: { iframeHeight: 400 },
-  },
-};
-
-const modules = {
-  imports: [
-    SprkAwardModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkAwardComponent,
+    docs: {
+      source: {
+        type: 'code',
       },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+      description: {
+        component: `${markdownDocumentationLinkBuilder('award')}`,
+      },
+      iframeHeight: 400,
+    },
+  },
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-award
       splitAt="tiny"
@@ -63,9 +65,8 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-award.component'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-award.component'],
 };

@@ -151,7 +151,7 @@ export const withStepDescriptions = () => {
     >
       <div
         class="
-          sprk-c-Stepper__step-content 
+          sprk-c-Stepper__step-content
           sprk-c-Stepper__step-content--has-description
         "
       >
@@ -188,7 +188,7 @@ export const withStepDescriptions = () => {
     >
       <div
         class="
-          sprk-c-Stepper__step-content 
+          sprk-c-Stepper__step-content
           sprk-c-Stepper__step-content--has-description
         "
       >
@@ -224,7 +224,7 @@ export const withStepDescriptions = () => {
     >
       <div
         class="
-          sprk-c-Stepper__step-content 
+          sprk-c-Stepper__step-content
           sprk-c-Stepper__step-content--has-description
         "
       >
@@ -260,7 +260,7 @@ export const withStepDescriptions = () => {
     >
       <div
         class="
-          sprk-c-Stepper__step-content 
+          sprk-c-Stepper__step-content
           sprk-c-Stepper__step-content--has-description
         "
       >
@@ -305,7 +305,7 @@ export const withDarkBackground = () => {
   }, []);
 
   return `
-  <div class="sprk-u-BackgroundColor--purple-dark sprk-o-Box sprk-o-Box--large">
+  <div class="sprk-c-Stepper__container-dark sprk-o-Box sprk-o-Box--large">
     <ol
       class="sprk-c-Stepper sprk-c-Stepper--has-dark-bg "
       data-sprk-stepper="container"
@@ -319,9 +319,9 @@ export const withDarkBackground = () => {
         class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
         data-sprk-stepper="step"
       >
-        <div 
+        <div
           class="
-            sprk-c-Stepper__step-content 
+            sprk-c-Stepper__step-content
             sprk-c-Stepper__step-content--has-description
           "
         >
@@ -331,8 +331,8 @@ export const withDarkBackground = () => {
             id="step-background-1"
           >
             <span class="sprk-c-Stepper__step-icon"></span>
-            <h3 
-              class="sprk-c-Stepper__step-heading" 
+            <h3
+              class="sprk-c-Stepper__step-heading"
               data-sprk-stepper="heading"
             >
               Step One
@@ -358,9 +358,9 @@ export const withDarkBackground = () => {
         class="sprk-c-Stepper__step"
         data-sprk-stepper="step"
       >
-        <div 
+        <div
           class="
-            sprk-c-Stepper__step-content 
+            sprk-c-Stepper__step-content
             sprk-c-Stepper__step-content--has-description
           "
         >
@@ -370,8 +370,8 @@ export const withDarkBackground = () => {
             id="step-background-2"
           >
             <span class="sprk-c-Stepper__step-icon"></span>
-            <h3 
-              class="sprk-c-Stepper__step-heading" 
+            <h3
+              class="sprk-c-Stepper__step-heading"
               data-sprk-stepper="heading"
             >
               Step Two
@@ -397,9 +397,9 @@ export const withDarkBackground = () => {
         class="sprk-c-Stepper__step"
         data-sprk-stepper="step"
       >
-        <div 
+        <div
           class="
-            sprk-c-Stepper__step-content 
+            sprk-c-Stepper__step-content
             sprk-c-Stepper__step-content--has-description
           "
         >
@@ -409,8 +409,8 @@ export const withDarkBackground = () => {
             id="step-background-3"
           >
             <span class="sprk-c-Stepper__step-icon"></span>
-            <h3 
-              class="sprk-c-Stepper__step-heading" 
+            <h3
+              class="sprk-c-Stepper__step-heading"
               data-sprk-stepper="heading"
             >
               Step Three
@@ -436,9 +436,9 @@ export const withDarkBackground = () => {
         class="sprk-c-Stepper__step"
         data-sprk-stepper="step"
       >
-        <div 
+        <div
           class="
-            sprk-c-Stepper__step-content 
+            sprk-c-Stepper__step-content
             sprk-c-Stepper__step-content--has-description
           "
         >
@@ -448,8 +448,8 @@ export const withDarkBackground = () => {
             id="step-background-4"
           >
             <span class="sprk-c-Stepper__step-icon"></span>
-            <h3 
-              class="sprk-c-Stepper__step-heading" 
+            <h3
+              class="sprk-c-Stepper__step-heading"
               data-sprk-stepper="heading"
             >
               Step Four
@@ -513,11 +513,11 @@ export const withCarousel = () => {
 
   return `
   <div class="sprk-u-BackgroundColor--purple-dark sprk-o-Box sprk-o-Box--large">
-    <div 
+    <div
       class="
-        sprk-o-CenteredColumn 
-        sprk-o-Stack sprk-o-Stack--medium 
-        sprk-o-Stack--center-column 
+        sprk-o-CenteredColumn
+        sprk-o-Stack sprk-o-Stack--medium
+        sprk-o-Stack--center-column
         sprk-o-Stack--split-reverse@xl
       "
     >
@@ -526,12 +526,12 @@ export const withCarousel = () => {
           class="sprk-c-Carousel sprk-c-Carousel--has-dark-bg"
           data-sprk-carousel="stepper-carousel-01"
         >
-          <div 
+          <div
             class="
-              sprk-c-Carousel__controls 
-              sprk-o-Stack 
-              sprk-o-Stack--split@xxs 
-              sprk-o-Stack--center-row 
+              sprk-c-Carousel__controls
+              sprk-o-Stack
+              sprk-o-Stack--split@xxs
+              sprk-o-Stack--center-row
               sprk-o-Stack--center-column
             "
           >
@@ -539,8 +539,8 @@ export const withCarousel = () => {
               <span class="sprk-u-ScreenReaderText">Previous Slide</span>
               <svg
                 class="
-                  sprk-c-Icon 
-                  sprk-c-Icon--filled-current-color 
+                  sprk-c-Icon
+                  sprk-c-Icon--filled-current-color
                   sprk-c-Icon--xl
                 "
                 viewBox="0 0 100 100"
@@ -574,8 +574,8 @@ export const withCarousel = () => {
               <span class="sprk-u-ScreenReaderText">Next Slide</span>
               <svg
                 class="
-                  sprk-c-Icon 
-                  sprk-c-Icon--filled-current-color 
+                  sprk-c-Icon
+                  sprk-c-Icon--filled-current-color
                   sprk-c-Icon--xl
                 "
                 viewBox="0 0 100 100"
@@ -591,8 +591,8 @@ export const withCarousel = () => {
       <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@xl">
         <ol
           class="
-            sprk-c-Stepper 
-            sprk-c-Stepper--has-dark-bg 
+            sprk-c-Stepper
+            sprk-c-Stepper--has-dark-bg
             sprk-c-Stepper--has-carousel
           "
           data-sprk-stepper="container"
@@ -607,24 +607,24 @@ export const withCarousel = () => {
             class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
             data-sprk-stepper="step"
           >
-            <div 
+            <div
               class="
-                sprk-c-Stepper__step-content 
+                sprk-c-Stepper__step-content
                 sprk-c-Stepper__step-content--has-description
               "
             >
               <span
                 class="
-                  sprk-c-Stepper__step-header 
-                  sprk-b-Link 
+                  sprk-c-Stepper__step-header
+                  sprk-b-Link
                   sprk-b-Link--plain
                 "
                 aria-controls="sc-target-1"
                 id="sc-step-1"
               >
                 <span class="sprk-c-Stepper__step-icon"></span>
-                <h3 
-                  class="sprk-c-Stepper__step-heading" 
+                <h3
+                  class="sprk-c-Stepper__step-heading"
                   data-sprk-stepper="heading"
                 >
                   Step One
@@ -639,7 +639,7 @@ export const withCarousel = () => {
                 role="tabpanel"
               >
                 <p class="sprk-b-TypeBodyTwo">
-                  Step 1 Lorem ipsum dolor sit amet 
+                  Step 1 Lorem ipsum dolor sit amet
                   consectetur adipisicing elit.
                 </p>
               </div>
@@ -651,24 +651,24 @@ export const withCarousel = () => {
             class="sprk-c-Stepper__step"
             data-sprk-stepper="step"
           >
-            <div 
+            <div
               class="
-                sprk-c-Stepper__step-content 
+                sprk-c-Stepper__step-content
                 sprk-c-Stepper__step-content--has-description
               "
             >
               <span
                 class="
-                  sprk-c-Stepper__step-header 
-                  sprk-b-Link 
+                  sprk-c-Stepper__step-header
+                  sprk-b-Link
                   sprk-b-Link--plain
                 "
                 aria-controls="sc-target-2"
                 id="sc-step-2"
               >
                 <span class="sprk-c-Stepper__step-icon"></span>
-                <h3 
-                  class="sprk-c-Stepper__step-heading" 
+                <h3
+                  class="sprk-c-Stepper__step-heading"
                   data-sprk-stepper="heading"
                 >
                   Step Two
@@ -683,7 +683,7 @@ export const withCarousel = () => {
                 role="tabpanel"
               >
                 <p class="sprk-b-TypeBodyTwo">
-                  Step 2 Lorem ipsum dolor sit amet 
+                  Step 2 Lorem ipsum dolor sit amet
                   consectetur adipisicing elit.
                 </p>
               </div>
@@ -695,24 +695,24 @@ export const withCarousel = () => {
             class="sprk-c-Stepper__step"
             data-sprk-stepper="step"
           >
-            <div 
+            <div
               class="
-                sprk-c-Stepper__step-content 
+                sprk-c-Stepper__step-content
                 sprk-c-Stepper__step-content--has-description
               "
             >
               <span
                 class="
-                  sprk-c-Stepper__step-header 
-                  sprk-b-Link 
+                  sprk-c-Stepper__step-header
+                  sprk-b-Link
                   sprk-b-Link--plain
                 "
                 aria-controls="sc-target-3"
                 id="sc-step-3"
               >
                 <span class="sprk-c-Stepper__step-icon"></span>
-                <h3 
-                  class="sprk-c-Stepper__step-heading" 
+                <h3
+                  class="sprk-c-Stepper__step-heading"
                   data-sprk-stepper="heading"
                 >
                   Step Three
@@ -727,7 +727,7 @@ export const withCarousel = () => {
                 role="tabpanel"
               >
                 <p class="sprk-b-TypeBodyTwo">
-                  Step 3 Lorem ipsum dolor sit amet 
+                  Step 3 Lorem ipsum dolor sit amet
                   consectetur adipisicing elit.
                 </p>
               </div>
@@ -739,23 +739,23 @@ export const withCarousel = () => {
             class="sprk-c-Stepper__step"
             data-sprk-stepper="step"
           >
-            <div 
+            <div
               class="
-                sprk-c-Stepper__step-content 
+                sprk-c-Stepper__step-content
                 sprk-c-Stepper__step-content--has-description
               "
             >
               <span
                 class="
-                  sprk-c-Stepper__step-header 
+                  sprk-c-Stepper__step-header
                   sprk-b-Link sprk-b-Link--plain
                 "
                 aria-controls="sc-target-4"
                 id="sc-step-4"
               >
                 <span class="sprk-c-Stepper__step-icon"></span>
-                <h3 
-                  class="sprk-c-Stepper__step-heading" 
+                <h3
+                  class="sprk-c-Stepper__step-heading"
                   data-sprk-stepper="heading"
                 >
                   Step Four
@@ -770,7 +770,7 @@ export const withCarousel = () => {
                 role="tabpanel"
               >
                 <p class="sprk-b-TypeBodyTwo">
-                  Step 4 Lorem ipsum dolor sit amet 
+                  Step 4 Lorem ipsum dolor sit amet
                   consectetur adipisicing elit.
                 </p>
               </div>

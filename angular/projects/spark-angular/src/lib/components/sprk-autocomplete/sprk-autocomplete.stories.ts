@@ -1,11 +1,12 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAutocompleteModule } from './sprk-autocomplete.module';
 import { SprkAutocompleteComponent } from './sprk-autocomplete.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { SprkAutocompleteResultsDirective } from './directives/sprk-autocomplete-results/sprk-autocomplete-results.directive';
 import { SprkAutocompleteResultDirective } from './directives/sprk-autocomplete-result/sprk-autocomplete-result.directive';
 import { SprkAutocompleteInputContainerDirective } from './directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
-
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta } from '@storybook/angular';
 export default {
   title: 'Components/Autocomplete',
   component: SprkAutocompleteComponent,
@@ -15,12 +16,18 @@ export default {
     SprkAutocompleteInputContainerDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
-    ),
+    moduleMetadata({
+      imports: [SprkAutocompleteModule],
+    }),
   ],
   parameters: {
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      iframeHeight: 400,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('autocomplete')}
 - Live demos of the Autocomplete are available on our
 [demo site](https://spark-testangular.netlify.app/autocomplete)
@@ -84,16 +91,12 @@ In order to keep the Spark Autocomplete flexible enough to use in a wide
     - The highlighted item is also identified by the value of
     \`aria-activedescendant\` on the input.
 `,
-    docs: { iframeHeight: 400 },
+      },
+    },
   },
-};
-
-const modules = {
-  imports: [SprkAutocompleteModule],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-autocomplete isOpen="true">
     <sprk-input-container>
@@ -114,6 +117,7 @@ export const defaultStory = () => ({
         <sprk-icon
           iconName="search"
           additionalClasses="
+            sprk-b-InputContainer__icon
             sprk-b-InlineSearch__icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -160,15 +164,13 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-autocomplete.component'],
-  },
+defaultStory.parameters = {
+  jest: ['sprk-autocomplete.component'],
 };
 
+defaultStory.storyName = 'Default';
+
 export const defaultInvalid = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-autocomplete>
     <sprk-input-container>
@@ -189,6 +191,7 @@ export const defaultInvalid = () => ({
         <sprk-icon
           iconName="search"
           additionalClasses="
+            sprk-b-InputContainer__icon
             sprk-b-InlineSearch__icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -242,15 +245,13 @@ export const defaultInvalid = () => ({
   `,
 });
 
-defaultInvalid.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: ['sprk-autocomplete.component'],
-  },
+defaultInvalid.storyName = 'Invalid';
+
+defaultInvalid.parameters = {
+  jest: ['sprk-autocomplete.component'],
 };
 
 export const defaultDisabled = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-autocomplete>
     <sprk-input-container>
@@ -272,6 +273,7 @@ export const defaultDisabled = () => ({
         <sprk-icon
           iconName="search"
           additionalClasses="
+            sprk-b-InputContainer__icon
             sprk-b-InlineSearch__icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -319,15 +321,13 @@ export const defaultDisabled = () => ({
   `,
 });
 
-defaultDisabled.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: ['sprk-autocomplete.component'],
-  },
+defaultDisabled.storyName = 'Disabled';
+
+defaultDisabled.parameters = {
+  jest: ['sprk-autocomplete.component'],
 };
 
 export const hugeStory = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-autocomplete isOpen="true">
     <sprk-input-container variant="huge">
@@ -342,6 +342,7 @@ export const hugeStory = () => ({
         <sprk-icon
           iconName="search"
           additionalClasses="
+            sprk-b-InputContainer__icon
             sprk-b-InlineSearch__icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -396,20 +397,17 @@ export const hugeStory = () => ({
   `,
 });
 
-hugeStory.story = {
-  name: 'Huge',
-  parameters: {
-    jest: ['sprk-autocomplete.component'],
-  },
+hugeStory.parameters = {
+  jest: ['sprk-autocomplete.component'],
 };
 
+hugeStory.storyName = 'Huge';
+
 export const hugeInvalid = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-autocomplete>
     <sprk-input-container variant="huge">
       <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
-
       <div
         sprkAutocompleteInputContainer
         aria-labelledby="autocomplete-label5"
@@ -419,6 +417,7 @@ export const hugeInvalid = () => ({
         <sprk-icon
           iconName="search"
           additionalClasses="
+            sprk-b-InputContainer__icon
             sprk-b-InlineSearch__icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -481,20 +480,17 @@ export const hugeInvalid = () => ({
   `,
 });
 
-hugeInvalid.story = {
-  name: 'Huge Invalid',
-  parameters: {
-    jest: ['sprk-autocomplete.component'],
-  },
+hugeInvalid.parameters = {
+  jest: ['sprk-autocomplete.component'],
 };
 
+hugeInvalid.storyName = 'Huge Invalid';
+
 export const hugeDisabled = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-autocomplete>
     <sprk-input-container variant="huge">
       <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
-
       <div
         sprkAutocompleteInputContainer
         aria-labelledby="autocomplete-label6"
@@ -504,6 +500,7 @@ export const hugeDisabled = () => ({
         <sprk-icon
           iconName="search"
           additionalClasses="
+            sprk-b-InputContainer__icon
             sprk-b-InlineSearch__icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -559,9 +556,8 @@ export const hugeDisabled = () => ({
   `,
 });
 
-hugeDisabled.story = {
-  name: 'Huge Disabled',
-  parameters: {
-    jest: ['sprk-autocomplete.component'],
-  },
+hugeDisabled.parameters = {
+  jest: ['sprk-autocomplete.component'],
 };
+
+hugeDisabled.storyName = 'Huge Disabled';

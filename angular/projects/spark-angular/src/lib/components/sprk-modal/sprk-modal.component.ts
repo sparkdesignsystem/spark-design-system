@@ -12,10 +12,7 @@ import { uniqueId } from 'lodash';
   template: `
     <div
       *ngIf="isVisible"
-      [ngClass]="{
-        'sprk-c-Modal': true,
-        'sprk-c-Modal--wait': modalType === 'wait'
-      }"
+      [ngClass]="getClasses()"
       role="dialog"
       tabindex="1"
       [attr.aria-labelledby]="heading_id"
@@ -104,6 +101,17 @@ import { uniqueId } from 'lodash';
   `,
 })
 export class SprkModalComponent {
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
+  @Input()
+  additionalClasses: string;
+  /**
+   * The value supplied will be
+   * rendered as the text for the Modal title.
+   */
   @Input()
   title: string;
   /**
@@ -242,5 +250,23 @@ export class SprkModalComponent {
     event.preventDefault();
     this.cancelClick.emit(event);
     this.closeModal(event);
+  }
+
+  /**
+   * @ignore
+   */
+  getClasses(): string {
+    const classArray: string[] = ['sprk-c-Modal'];
+    if (this.modalType === 'wait') {
+      classArray.push('sprk-c-Modal--wait');
+    }
+
+    if (this.additionalClasses) {
+      this.additionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
   }
 }

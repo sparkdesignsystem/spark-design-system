@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta } from '@storybook/angular';
 import { SprkFooterModule } from './sprk-footer.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkFooterComponent } from './sprk-footer.component';
@@ -9,34 +11,41 @@ import { APP_BASE_HREF } from '@angular/common';
 export default {
   title: 'Components/Footer',
   component: SprkFooterComponent,
-  decorators: [storyWrapper((storyContent) => `<div>${storyContent}<div>`)],
+  decorators: [
+    moduleMetadata({
+      imports: [
+        SprkFooterModule,
+        BrowserAnimationsModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkFooterComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
+  ],
   parameters: {
-    info: `
+    layout: 'fullscreen',
+    docs: {
+      source: {
+        type: 'code',
+      },
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('footer')}
 - The Footer is a navigation landmark for
 accessibility tools. The attribute \`role=”contentinfo”\`
 must be present.
   `,
-    docs: { iframeHeight: 800 },
-  },
-};
-
-const modules = {
-  imports: [
-    SprkFooterModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkFooterComponent,
       },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+      iframeHeight: 800,
+    },
+  },
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-footer
       idString="footer-1"
@@ -101,10 +110,6 @@ export const defaultStory = () => ({
             },
             {
               text: 'Opt Out',
-              href: '#nogo'
-            },
-            {
-              text: 'About That',
               href: '#nogo'
             },
             {
@@ -212,7 +217,7 @@ export const defaultStory = () => ({
         }
       ]"
 
-      awardsHeading="Awards"
+      awardsHeading="Awards Heading Title"
       [awards]="[
         {
           href: '#nogo',
@@ -271,13 +276,40 @@ export const defaultStory = () => ({
           Sed ut perspiciatis unde omnis iste natus error sit <a href="#nogo" sprkLink class="sprk-b-Link--inline-light"> inline link</a> accusantium doloremque laudantium
         </p>
       </sprk-stack>
+      <sprk-stack
+        itemSpacing="medium"
+        splitAt="small"
+        app-slot
+      >
+        <div sprkStackItem>
+          <a href="#nogo" sprkLink>
+            <img src="https://spark-assets.netlify.app/apple-store.svg" alt="Go to Apple Store"/>
+          </a>
+        </div>
+        <div sprkStackItem>
+          <a href="#nogo" sprkLink>
+            <img src="https://spark-assets.netlify.app/google-play.svg" alt="Go to Google Play Store"/>
+          </a>
+        </div>
+      </sprk-stack>
+      <div
+        additional-award-slot
+        sprkStackItem
+      >
+        <p
+          sprkText
+          variant="bodyFour"
+          class="sprk-c-Footer__text"
+        >
+          Sed ut perspiciatis unde omnis iste natus error sit <a href="#nogo" sprkLink class="sprk-b-Link--inline-light"> inline link</a> accusantium doloremque laudantium
+        </p>
+      </div>
     </sprk-footer>
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-footer.component'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-footer.component'],
 };

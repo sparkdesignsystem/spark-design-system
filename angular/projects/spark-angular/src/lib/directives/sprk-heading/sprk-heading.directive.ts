@@ -59,11 +59,11 @@ export class SprkHeadingDirective {
     return this.variant === 'displaySeven';
   }
 
-  @HostBinding('class.sprk-b-PageTitle')
   /**
    * Value will be used to select
    * the heading style.
    */
+  @HostBinding('class.sprk-b-PageTitle')
   @Input()
   isPageTitle = false;
 }

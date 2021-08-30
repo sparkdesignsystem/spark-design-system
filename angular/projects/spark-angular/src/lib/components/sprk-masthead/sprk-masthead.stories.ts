@@ -2,6 +2,8 @@
 /* tslint:disable: max-line-length */
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
+// @ts-ignore
+import { moduleMetadata, Meta } from '@storybook/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkMastheadModule } from './sprk-masthead.module';
 import { SprkMastheadComponent } from './sprk-masthead.component';
@@ -31,6 +33,26 @@ import { SprkMastheadNavItemsDirective } from './directives/sprk-masthead-nav-it
 export default {
   title: 'Components/Masthead',
   component: SprkMastheadComponent,
+  decorators: [
+    moduleMetadata({
+      imports: [
+        SprkMastheadModule,
+        SprkHighlightBoardModule,
+        SprkCardModule,
+        SprkTextModule,
+        SprkHeadingModule,
+        SprkBoxModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkMastheadComponent,
+          },
+        ]),
+        BrowserAnimationsModule,
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
+  ],
   parameters: {
     subcomponents: {
       SprkMastheadAccordionComponent,
@@ -50,7 +72,14 @@ export default {
       SprkStackItemDirective,
       SprkStackComponent,
     },
-    info: `
+    layout: 'fullscreen',
+    docs: {
+      source: {
+        type: 'code',
+      },
+      inlineStories: false,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('masthead')}
 - You should configure the size of your own logo.
 By default, the logo will be automatically sized
@@ -81,9 +110,11 @@ so we add \`role=”banner”\` to the Masthead.
 - The Masthead will be "sticky" on small viewports in all browsers
 except for IE11.
 `,
-    docs: { iframeHeight: 300 },
+      },
+      iframeHeight: 300,
+    },
   },
-};
+} as Meta;
 
 const logoSvg = `
     <title>Spark Design System Logo</title>
@@ -317,27 +348,7 @@ const bodyContent = `
   </main>
 `;
 
-const modules = {
-  imports: [
-    SprkMastheadModule,
-    SprkHighlightBoardModule,
-    SprkCardModule,
-    SprkTextModule,
-    SprkHeadingModule,
-    SprkBoxModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkMastheadComponent,
-      },
-    ]),
-    BrowserAnimationsModule,
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
-
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-masthead>
       <div sprkMastheadBranding sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
@@ -516,7 +527,8 @@ export const defaultStory = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 (555) 555-5555
@@ -538,7 +550,8 @@ export const defaultStory = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Talk To Us
@@ -567,19 +580,17 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-masthead.component',
-      'sprk-masthead-accordion.component',
-      'sprk-masthead-accordion-item.component',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: [
+    'sprk-masthead.component',
+    'sprk-masthead-accordion.component',
+    'sprk-masthead-accordion-item.component',
+  ],
 };
 
 export const extended = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-masthead>
       <div sprkMastheadBranding sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
@@ -615,7 +626,7 @@ export const extended = () => ({
       >
         <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
           <sprk-stack additionalClasses="sprk-o-Stack--center-column sprk-o-Stack--center-row">
-            <div sprkStackItem class="sprk-u-Position--relative">
+            <div sprkStackItem class="sprk-c-Masthead__selector-container">
               <sprk-masthead-selector
                 triggerText="Choose One"
                 heading="Choose One"
@@ -664,7 +675,7 @@ export const extended = () => ({
               triggerIconName="user"
               triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
               iconAdditionalClasses="sprk-c-Icon--xl"
-              additionalClasses="sprk-u-Right--zero sprk-u-mrm"
+              additionalClasses="sprk-c-Masthead__dropdown"
               screenReaderText="User Account"
             >
             </sprk-dropdown>
@@ -702,7 +713,7 @@ export const extended = () => ({
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
-                additionalClasses="sprk-u-TextAlign--left"
+                additionalClasses="sprk-b-Type--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-2"
                 triggerText="Item Two"
@@ -731,7 +742,7 @@ export const extended = () => ({
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
-                additionalClasses="sprk-u-TextAlign--left"
+                additionalClasses="sprk-b-Type--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-4"
                 triggerText="Item Four"
@@ -913,7 +924,8 @@ export const extended = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 (555) 555-5555
@@ -935,7 +947,8 @@ export const extended = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Talk To Us
@@ -957,7 +970,8 @@ export const extended = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Settings
@@ -1082,19 +1096,16 @@ export const extended = () => ({
   },
 });
 
-extended.story = {
-  parameters: {
-    docs: { iframeHeight: 450 },
-    jest: [
-      'sprk-masthead.component',
-      'sprk-masthead-accordion.component',
-      'sprk-masthead-accordion-item.component',
-    ],
-  },
+extended.parameters = {
+  docs: { iframeHeight: 450 },
+  jest: [
+    'sprk-masthead.component',
+    'sprk-masthead-accordion.component',
+    'sprk-masthead-accordion-item.component',
+  ],
 };
 
 export const extendedWithExampleContent = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-masthead>
       <div sprkMastheadBranding sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
@@ -1130,7 +1141,7 @@ export const extendedWithExampleContent = () => ({
       >
         <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
           <sprk-stack additionalClasses="sprk-o-Stack--center-column sprk-o-Stack--center-row">
-            <div sprkStackItem class="sprk-u-Position--relative">
+            <div sprkStackItem class="sprk-c-Masthead__selector-container">
               <sprk-masthead-selector
                 triggerText="Choose One"
                 heading="Choose One"
@@ -1179,7 +1190,7 @@ export const extendedWithExampleContent = () => ({
               triggerIconName="user"
               triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
               iconAdditionalClasses="sprk-c-Icon--xl"
-              additionalClasses="sprk-u-Right--zero sprk-u-mrm"
+              additionalClasses="sprk-c-Masthead__dropdown"
               screenReaderText="User Account"
             >
             </sprk-dropdown>
@@ -1218,7 +1229,7 @@ export const extendedWithExampleContent = () => ({
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
-                additionalClasses="sprk-u-TextAlign--left"
+                additionalClasses="sprk-b-Type--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-2"
                 triggerText="Item Two"
@@ -1247,7 +1258,7 @@ export const extendedWithExampleContent = () => ({
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
-                additionalClasses="sprk-u-TextAlign--left"
+                additionalClasses="sprk-b-Type--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-4"
                 triggerText="Item Four"
@@ -1426,7 +1437,8 @@ export const extendedWithExampleContent = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 (555) 555-5555
@@ -1448,7 +1460,8 @@ export const extendedWithExampleContent = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Talk To Us
@@ -1470,7 +1483,8 @@ export const extendedWithExampleContent = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Settings
@@ -1596,19 +1610,16 @@ export const extendedWithExampleContent = () => ({
   },
 });
 
-extendedWithExampleContent.story = {
-  parameters: {
-    docs: { iframeHeight: 450 },
-    jest: [
-      'sprk-masthead.component',
-      'sprk-masthead-accordion.component',
-      'sprk-masthead-accordion-item.component',
-    ],
-  },
+extendedWithExampleContent.parameters = {
+  docs: { iframeHeight: 450 },
+  jest: [
+    'sprk-masthead.component',
+    'sprk-masthead-accordion.component',
+    'sprk-masthead-accordion-item.component',
+  ],
 };
 
 export const withoutCollapsibleNav = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-masthead additionalClasses="sprk-o-Stack--split@xxs sprk-o-Box sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-o-Stack--medium">
       <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
@@ -1634,8 +1645,6 @@ export const withoutCollapsibleNav = () => ({
   `,
 });
 
-withoutCollapsibleNav.story = {
-  parameters: {
-    jest: ['sprk-masthead.component'],
-  },
+withoutCollapsibleNav.parameters = {
+  jest: ['sprk-masthead.component'],
 };

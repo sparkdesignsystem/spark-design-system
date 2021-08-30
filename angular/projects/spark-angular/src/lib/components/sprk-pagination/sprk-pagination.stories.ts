@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta } from '@storybook/angular';
 import { SprkPaginationModule } from './sprk-pagination.module';
 import { SprkPaginationComponent } from './sprk-pagination.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -7,14 +9,18 @@ export default {
   title: 'Components/Pagination',
   component: SprkPaginationComponent,
   decorators: [
-    storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+    moduleMetadata({
+      imports: [SprkPaginationModule],
+    }),
   ],
   parameters: {
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      iframeHeight: 70,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('pagination')}
 - The goToPage event includes the newly selected page
 in a property called “page”, while the goBack and
@@ -22,18 +28,12 @@ goForward events include this value in a property called
 “newPage”. This is further documented in
 [Issue 1730](https://github.com/sparkdesignsystem/spark-design-system/issues/1730).
 `,
-    docs: { iframeHeight: 70 },
+      },
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkPaginationModule,
-  ],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-pagination
       [totalItems]="3"
@@ -44,17 +44,13 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-pagination.component',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-pagination.component'],
 };
 
 export const pager = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-pagination
       paginationType="pager"
@@ -66,10 +62,6 @@ export const pager = () => ({
   `,
 });
 
-pager.story = {
-  parameters: {
-    jest: [
-      'sprk-pagination.component',
-    ],
-  },
+pager.parameters = {
+  jest: ['sprk-pagination.component'],
 };

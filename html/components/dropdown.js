@@ -4,12 +4,12 @@ import { isEscPressed } from '../utilities/keypress';
 
 const hideDropDown = (dropdown) => {
   dropdown.classList.remove('sprk-c-Dropdown--open');
-  dropdown.classList.add('sprk-u-Display--none');
+  dropdown.classList.add('sprk-c-Dropdown--is-hidden');
 };
 
 const showDropDown = (dropdown) => {
   dropdown.classList.add('sprk-c-Dropdown--open');
-  dropdown.classList.remove('sprk-u-Display--none');
+  dropdown.classList.remove('sprk-c-Dropdown--is-hidden');
 };
 
 const removeActiveStatus = (choices) => {

@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkCenteredColumnDirective } from './sprk-centered-column.directive';
 import { SprkCenteredColumnModule } from './sprk-centered-column.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -6,37 +8,41 @@ import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook
 export default {
   title: 'Components/Centered Column',
   component: SprkCenteredColumnDirective,
-  decorators: [storyWrapper(storyContent => `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`)],
+  decorators: [
+    moduleMetadata({
+      imports: [SprkCenteredColumnModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sb-decorate">${story}</div>`,
+    ),
+  ],
   parameters: {
-    docs: { iframeHeight: 140 },
-    info: `${markdownDocumentationLinkBuilder('centered-column')}
+    docs: {
+      source: {
+        type: 'code',
+      },
+      iframeHeight: 140,
+      description: {
+        component: `${markdownDocumentationLinkBuilder('centered-column')}
 - The \`sprk-o-CenteredColumn\` class can be applied to
 any parent element that
 is being used to contain the application contents within
 a maximum width.
     `,
-  }
-};
-
-const modules = {
-  imports: [
-    SprkCenteredColumnModule,
-  ],
-};
+      },
+    },
+  },
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <div sprkCenteredColumn idString="centered-column">
     </div>
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-centered-column.directive',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-centered-column.directive'],
 };

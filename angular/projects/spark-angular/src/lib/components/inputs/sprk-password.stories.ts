@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
@@ -23,6 +25,7 @@ import { SprkSelectionItemContainerComponent } from './sprk-selection-item-conta
 import { SprkSelectionInputDirective } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
 import { SprkSelectionLabelDirective } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Password',
@@ -40,13 +43,29 @@ export default {
     SprkSelectionInputDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
-          <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
-          </form>
-        <div>`,
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        FormsModule,
+        SprkInputModule,
+        SprkIconModule,
+        SprkFieldErrorModule,
+        SprkCheckboxInputModule,
+        SprkCheckboxLabelModule,
+        SprkCheckboxItemModule,
+        SprkSelectionContainerModule,
+        SprkSelectionItemContainerModule,
+        SprkSelectionInputModule,
+        SprkSelectionLabelModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `
+        <form (submit)="onSubmit($event)" #sampleForm="ngForm">
+          ${story}
+        </form>
+      `,
     ),
   ],
   props: {
@@ -55,35 +74,21 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
 - Requires Additional Engineering:
   - Show/Hide Functionality - Create a function that toggles
   the \`type\` attribute of the input between \`text\` and \`password\`.
     `,
-    docs: { iframeHeight: 200 },
+      },
+      iframeHeight: 200,
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkInputModule,
-    SprkIconModule,
-    SprkFieldErrorModule,
-    SprkCheckboxInputModule,
-    SprkCheckboxLabelModule,
-    SprkCheckboxItemModule,
-    SprkSelectionContainerModule,
-    SprkSelectionItemContainerModule,
-    SprkSelectionInputModule,
-    SprkSelectionLabelModule,
-  ],
-};
+} as Meta;
 
 export const passwordInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="password" sprkLabel>Password</label>
@@ -102,22 +107,20 @@ export const passwordInput = () => ({
   `,
 });
 
-passwordInput.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-checkbox-item.component',
-      'sprk-input.directive',
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-label.directive',
-    ],
-  },
+passwordInput.storyName = 'Default';
+
+passwordInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-checkbox-item.component',
+    'sprk-input.directive',
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidPasswordInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="invalid-password" sprkLabel>Password</label>
@@ -136,7 +139,7 @@ export const invalidPasswordInput = () => ({
         <input
           type="checkbox"
           sprkCheckboxInput
-          id="show-password"
+          id="show-password-1"
         />
         <label for="show-password" sprkCheckboxLabel>Show Password</label>
       </sprk-checkbox-item>
@@ -152,23 +155,21 @@ export const invalidPasswordInput = () => ({
   `,
 });
 
-invalidPasswordInput.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-checkbox-item.component',
-      'sprk-input.directive',
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidPasswordInput.storyName = 'Invalid';
+
+invalidPasswordInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-checkbox-item.component',
+    'sprk-input.directive',
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledPasswordInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="disabled-password" isDisabled="true" sprkLabel>Password</label>
@@ -185,31 +186,29 @@ export const disabledPasswordInput = () => ({
         <input
           type="checkbox"
           sprkCheckboxInput
-          id="show-password"
+          id="show-password-2"
           disabled
         />
-        <label isDisabled="true" for="show-password" sprkCheckboxLabel>Show Password</label>
+        <label isDisabled="true" for="show-password-2" sprkCheckboxLabel>Show Password</label>
       </sprk-checkbox-item>
     </sprk-input-container>
   `,
 });
 
-disabledPasswordInput.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-checkbox-item.component',
-      'sprk-input.directive',
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledPasswordInput.storyName = 'Disabled';
+
+disabledPasswordInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-checkbox-item.component',
+    'sprk-input.directive',
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacy = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label sprkLabel>Password</label>
@@ -220,29 +219,27 @@ export const legacy = () => ({
         <input
           type="checkbox"
           sprkSelectionInput
-          id="show-password"
+          id="show-password-3"
         />
-        <label for="show-password" sprkSelectionLabel>Show Password</label>
+        <label for="show-password-3" sprkSelectionLabel>Show Password</label>
       </sprk-selection-item-container>
     </sprk-input-container>
   `,
 });
 
-legacy.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-selection-item-container.component',
-      'sprk-input.directive',
-      'sprk-selection-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacy.storyName = 'Legacy (Deprecated)';
+
+legacy.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-selection-item-container.component',
+    'sprk-input.directive',
+    'sprk-selection-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyInvalidPasswordInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label sprkLabel>Password</label>
@@ -259,9 +256,9 @@ export const legacyInvalidPasswordInput = () => ({
         <input
           type="checkbox"
           sprkSelectionInput
-          id="show-password"
+          id="show-password-4"
         />
-        <label for="show-password" sprkSelectionLabel>Show Password</label>
+        <label for="show-password-4" sprkSelectionLabel>Show Password</label>
       </sprk-selection-item-container>
       <span sprkFieldError>
         <sprk-icon
@@ -275,22 +272,20 @@ export const legacyInvalidPasswordInput = () => ({
   `,
 });
 
-legacyInvalidPasswordInput.story = {
-  name: 'Legacy Invalid (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-selection-item-container.component',
-      'sprk-input.directive',
-      'sprk-selection-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidPasswordInput.storyName = 'Legacy Invalid (Deprecated)';
+
+legacyInvalidPasswordInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-selection-item-container.component',
+    'sprk-input.directive',
+    'sprk-selection-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledPasswordInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label class="sprk-b-Label--disabled" sprkLabel>Password</label>
@@ -301,24 +296,23 @@ export const legacyDisabledPasswordInput = () => ({
         <input
           type="checkbox"
           sprkSelectionInput
-          id="show-password"
+          id="show-password-5"
           disabled
         />
-        <label class="sprk-b-Label--disabled" for="show-password" sprkSelectionLabel>Show Password</label>
+        <label class="sprk-b-Label--disabled" for="show-password-5" sprkSelectionLabel>Show Password</label>
       </sprk-selection-item-container>
     </sprk-input-container>
   `,
 });
 
-legacyDisabledPasswordInput.story = {
-  name: 'Legacy Disabled (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-selection-item-container.component',
-      'sprk-input.directive',
-      'sprk-selection-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyDisabledPasswordInput.storyName = 'Legacy Disabled (Deprecated)';
+
+legacyDisabledPasswordInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-selection-item-container.component',
+    'sprk-input.directive',
+    'sprk-selection-input.directive',
+    'sprk-label.directive',
+  ],
 };

@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
@@ -11,6 +13,7 @@ import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-labe
 import { SprkHugeInputContainerModule } from './sprk-huge-input-container/sprk-huge-input-container.module';
 import { SprkHugeInputContainerComponent } from './sprk-huge-input-container/sprk-huge-input-container.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Text',
@@ -22,13 +25,23 @@ export default {
     SprkFieldErrorDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
-          <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
-          </form>
-        <div>`,
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkInputModule,
+        SprkIconModule,
+        SprkHugeInputContainerModule,
+        SprkFieldErrorModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `
+        <form (submit)="onSubmit($event)" #sampleForm="ngForm">
+          ${story}
+        </form>
+      `,
     ),
   ],
   props: {
@@ -37,26 +50,18 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      iframeHeight: 200,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
-    `,
-    docs: { iframeHeight: 200 },
+         `,
+      },
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkInputModule,
-    SprkIconModule,
-    SprkHugeInputContainerModule,
-    SprkFieldErrorModule,
-  ],
-};
+} as Meta;
 
 export const textInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="text" sprkLabel>Text Input Label</label>
@@ -72,19 +77,17 @@ export const textInput = () => ({
   `,
 });
 
-textInput.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+textInput.storyName = 'Default';
+
+textInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="invalid-text" sprkLabel>Text Input Label</label>
@@ -111,20 +114,18 @@ export const invalidTextInput = () => ({
   `,
 });
 
-invalidTextInput.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidTextInput.storyName = 'Invalid';
+
+invalidTextInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="disabled-text" isDisabled="true" sprkLabel>Text Input Label</label>
@@ -141,19 +142,17 @@ export const disabledTextInput = () => ({
   `,
 });
 
-disabledTextInput.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledTextInput.storyName = 'Disabled';
+
+disabledTextInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const hugeTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container variant="huge">
       <input
@@ -171,19 +170,17 @@ export const hugeTextInput = () => ({
   `,
 });
 
-hugeTextInput.story = {
-  name: 'Huge',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+hugeTextInput.storyName = 'Huge';
+
+hugeTextInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidHugeTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container variant="huge">
       <input
@@ -212,20 +209,18 @@ export const invalidHugeTextInput = () => ({
   `,
 });
 
-invalidHugeTextInput.story = {
-  name: 'Huge Invalid',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidHugeTextInput.storyName = 'Huge Invalid';
+
+invalidHugeTextInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledHugeTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container variant="huge">
       <input
@@ -244,19 +239,17 @@ export const disabledHugeTextInput = () => ({
   `,
 });
 
-disabledHugeTextInput.story = {
-  name: 'Huge Disabled',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledHugeTextInput.storyName = 'Huge Disabled';
+
+disabledHugeTextInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyHugeTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
       <input
@@ -273,19 +266,17 @@ export const legacyHugeTextInput = () => ({
   `,
 });
 
-legacyHugeTextInput.story = {
-  name: 'Legacy Huge (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-huge-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyHugeTextInput.storyName = 'Legacy Huge (Deprecated)';
+
+legacyHugeTextInput.parameters = {
+  jest: [
+    'sprk-huge-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyInvalidHugeTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
       <input
@@ -313,20 +304,18 @@ export const legacyInvalidHugeTextInput = () => ({
   `,
 });
 
-legacyInvalidHugeTextInput.story = {
-  name: 'Legacy Huge Invalid (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-huge-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidHugeTextInput.storyName = 'Legacy Huge Invalid (Deprecated)';
+
+legacyInvalidHugeTextInput.parameters = {
+  jest: [
+    'sprk-huge-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledHugeTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
       <input
@@ -350,13 +339,12 @@ export const legacyDisabledHugeTextInput = () => ({
   `,
 });
 
-legacyDisabledHugeTextInput.story = {
-  name: 'Legacy Huge Disabled (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-huge-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyDisabledHugeTextInput.storyName = 'Legacy Huge Disabled (Deprecated)';
+
+legacyDisabledHugeTextInput.parameters = {
+  jest: [
+    'sprk-huge-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };

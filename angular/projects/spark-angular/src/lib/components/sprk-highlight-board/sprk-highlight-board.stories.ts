@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta } from '@storybook/angular';
 import { SprkHighlightBoardModule } from './sprk-highlight-board.module';
 import { SprkHighlightBoardComponent } from './sprk-highlight-board.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -9,12 +11,26 @@ export default {
   title: 'Components/Highlight Board',
   component: SprkHighlightBoardComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
-    ),
+    moduleMetadata({
+      imports: [
+        SprkHighlightBoardModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkHighlightBoardComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
   ],
   parameters: {
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('highlight-board')}
 ##### Accessibility
 - If the Buttons are being used to navigate
@@ -26,25 +42,13 @@ make sure to set \`imgAlt=""\` so the image will be hidden from assistive
 technology. For more information on how and when to add \`alt\` text to images,
 see this [alt text guide](https://webaim.org/techniques/alttext/#decorative).
 `,
-    docs: { iframeHeight: 600 },
-  },
-};
-
-const modules = {
-  imports: [
-    SprkHighlightBoardModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkHighlightBoardComponent,
       },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+      iframeHeight: 600,
+    },
+  },
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-highlight-board
       heading="Hello, Welcome To Spark Design System"
@@ -60,15 +64,13 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-highlight-board.component'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-highlight-board.component'],
 };
 
 export const noImage = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-highlight-board
       heading="Hello, Welcome To Spark Design System"
@@ -81,15 +83,12 @@ export const noImage = () => ({
   `,
 });
 
-noImage.story = {
-  parameters: {
-    docs: { iframeHeight: 300 },
-    jest: ['sprk-highlight-board.component'],
-  },
+noImage.parameters = {
+  docs: { iframeHeight: 300 },
+  jest: ['sprk-highlight-board.component'],
 };
 
 export const stacked = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-highlight-board
       heading="Hello, Welcome To Spark Design System"
@@ -104,9 +103,7 @@ export const stacked = () => ({
   `,
 });
 
-stacked.story = {
-  parameters: {
-    docs: { iframeHeight: 800 },
-    jest: ['sprk-highlight-board.component'],
-  },
+stacked.parameters = {
+  docs: { iframeHeight: 800 },
+  jest: ['sprk-highlight-board.component'],
 };

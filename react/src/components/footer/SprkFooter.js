@@ -5,6 +5,7 @@ import uniqueId from 'lodash/uniqueId';
 import SprkIcon from '../icons/SprkIcon';
 import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
 import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
+import SprkDivider from '../dividers/SprkDivider';
 import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
 
 class SprkFooter extends Component {
@@ -35,6 +36,7 @@ class SprkFooter extends Component {
       paragraphs,
       additionalIcons,
       additionalDisclaimer,
+      appStoreLinks,
     } = this.props;
 
     const {
@@ -79,12 +81,13 @@ class SprkFooter extends Component {
                   linkColumnsHasIds.map((column) => (
                     <div
                       key={column.id}
-                      className="sprk-o-Stack__item
+                      className="
+                        sprk-o-Stack__item
                         sprk-o-Stack__item--third@m
-                        sprk-o-Box
-                        sprk-u-PaddingRight--a
+                        sprk-c-Footer__local-links
                         sprk-o-Stack
-                        sprk-o-Stack--large"
+                        sprk-o-Stack--large
+                      "
                     >
                       <h3
                         className="
@@ -139,20 +142,27 @@ class SprkFooter extends Component {
                   ))}
               </div>
 
-              {Object.keys(connectIcons).length > 1 && (
-                <SprkFooterConnectIcons connectIcons={connectIcons} />
+              {(Object.keys(connectIcons).length > 1 || appStoreLinks) && (
+                <SprkFooterConnectIcons
+                  connectIcons={connectIcons}
+                  appStoreLinks={appStoreLinks}
+                />
               )}
             </div>
           </div>
 
-          <span className="sprk-c-Divider sprk-u-mvn sprk-u-mhm" />
+          <SprkDivider
+            element="span"
+            additionalClasses="sprk-c-Footer__divider"
+          />
 
           <div
-            className="sprk-o-Stack__item
-            sprk-o-Stack
-            sprk-o-Stack--misc-b
-            sprk-o-Box
-            sprk-u-PaddingTop--b"
+            className="
+              sprk-o-Stack__item
+              sprk-o-Stack
+              sprk-o-Stack--misc-b
+              sprk-c-Footer__awards
+            "
           >
             {Object.keys(awards).length > 1 && (
               <SprkFooterAwards awards={awards} />
@@ -328,6 +338,8 @@ SprkFooter.propTypes = {
       ),
     }),
   ),
+  /** An optional spot to pass in App Store links. */
+  appStoreLinks: PropTypes.node,
   /** Constructs the Connect Icon Section. */
   connectIcons: PropTypes.shape({
     /** The main headline for the section. */

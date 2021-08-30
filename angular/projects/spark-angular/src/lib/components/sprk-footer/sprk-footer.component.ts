@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import {
   ISprkFooterGlobalLink,
   ISprkFooterLocalLinkColumn,
@@ -23,7 +23,13 @@ import {
         >
           <div
             *ngIf="globalLinks"
-            class="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh"
+            class="
+              sprk-o-Stack__item
+              sprk-o-Stack__item--three-tenths@m
+              sprk-o-Stack
+              sprk-o-Stack--misc-b
+              sprk-c-Footer__global-links
+            "
           >
             <h3
               class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text"
@@ -99,7 +105,13 @@ import {
             >
               <div
                 *ngFor="let item of localLinks"
-                class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-u-PaddingRight--a sprk-o-Stack sprk-o-Stack--large"
+                class="
+                  sprk-o-Stack__item
+                  sprk-o-Stack__item--third@m
+                  sprk-c-Footer__local-links
+                  sprk-o-Stack
+                  sprk-o-Stack--large
+                "
               >
                 <h3
                   class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text"
@@ -144,7 +156,7 @@ import {
             </div>
 
             <div
-              *ngIf="socialLinks"
+              *ngIf="socialLinks || appSlot"
               class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box"
             >
               <h3
@@ -153,9 +165,7 @@ import {
                 {{ connectHeading }}
               </h3>
 
-              <div
-                class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@m"
-              >
+              <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large">
                 <ul
                   *ngIf="socialLinks"
                   class="
@@ -213,18 +223,24 @@ import {
                     </a>
                   </li>
                 </ul>
+                <ng-content select="[app-slot]"></ng-content>
               </div>
             </div>
           </div>
         </div>
-
         <span
-          class="sprk-c-Divider sprk-u-mvn sprk-u-mhm"
+          sprkDivider
+          class="sprk-c-Footer__divider"
           data-id="divider-1"
         ></span>
 
         <div
-          class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-PaddingTop--b"
+          class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--misc-b
+            sprk-c-Footer__awards
+          "
         >
           <div
             *ngIf="awards"
@@ -237,7 +253,13 @@ import {
             </h3>
 
             <div
-              class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm"
+              class="
+                sprk-o-Stack__item
+                sprk-o-Stack
+                sprk-o-Stack--medium
+                sprk-o-Stack--split@s
+                sprk-c-Footer__awards-media
+              "
             >
               <div class="sprk-o-Stack__item" *ngFor="let award of awards">
                 <a
@@ -276,6 +298,8 @@ import {
                 </a>
               </div>
             </div>
+
+            <ng-content select="[additional-award-slot]"></ng-content>
 
             <div
               *ngFor="let toggle of disclaimerToggle"
@@ -452,6 +476,9 @@ export class SprkFooterComponent {
    */
   @Input()
   disclaimerToggle: ISprkDisclaimerToggle[];
+
+  @ViewChild('app-slot', { static: false })
+  appSlot: ElementRef;
 
   /**
    * @ignore

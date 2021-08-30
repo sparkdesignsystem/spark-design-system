@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkLinkDirective } from './sprk-link.directive';
 import { SprkIconModule } from '../../components/sprk-icon/sprk-icon.module';
 import { SprkLinkDirectiveModule } from './sprk-link.module';
@@ -13,43 +15,45 @@ export default {
   title: 'Components/Link',
   component: SprkLinkDirective,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
-    ),
+    moduleMetadata({
+      imports: [
+        SprkLinkDirectiveModule,
+        SprkBoxModule,
+        SprkIconModule,
+        SprkLinkModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkLinkComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
   ],
   parameters: {
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      iframeHeight: 60,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('link')}
 - Spark Link styles are for text-based links. Images that are links should not
 use Spark classes.
 - Spark Link has been refactored to be an Angular Directive. The old Angular
 Component version has been deprecated. This version will be permanently
 removed from Spark in an upcoming release. To update to the new version,
-replace any instance of the <code><sprk-link></code> component in your codebase
+replace any instance of the \`<sprk-link>\` component in your codebase
 with the new Directive syntax.
 `,
-    docs: { iframeHeight: 60 },
-  },
-};
-
-const modules = {
-  imports: [
-    SprkLinkDirectiveModule,
-    SprkBoxModule,
-    SprkIconModule,
-    SprkLinkModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkLinkComponent,
       },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+    },
+  },
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <a
       href="#"
@@ -62,15 +66,13 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
 export const simple = () => ({
-  moduleMetadata: modules,
   template: `
     <a
       href="#"
@@ -84,14 +86,11 @@ export const simple = () => ({
   `,
 });
 
-simple.story = {
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+simple.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
 export const light = () => ({
-  moduleMetadata: modules,
   template: `
     <a
       sprkLink
@@ -105,20 +104,18 @@ export const light = () => ({
   `,
 });
 
-light.story = {
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
-  decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box sprk-o-Box--small sprk-u-BackgroundColor--black">${storyContent}<div>`,
-    ),
-  ],
+light.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
+light.decorators = [
+  componentWrapperDecorator(
+    (story) =>
+      `<div class="sprk-o-Box sprk-o-Box--small sprk-u-BackgroundColor--black">${story}<div>`,
+  ),
+];
+
 export const iconWithTextLink = () => ({
-  moduleMetadata: modules,
   template: `
     <a
       href="#"
@@ -132,7 +129,8 @@ export const iconWithTextLink = () => ({
         additionalClasses="
           sprk-c-Icon--l
           sprk-c-Icon--filled-current-color
-          sprk-u-mrs"
+          sprk-b-Link__icon
+        "
       >
       </sprk-icon>
       Back
@@ -140,14 +138,11 @@ export const iconWithTextLink = () => ({
   `,
 });
 
-iconWithTextLink.story = {
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+iconWithTextLink.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
 export const disabled = () => ({
-  moduleMetadata: modules,
   template: `
     <a
       href="#"
@@ -161,14 +156,11 @@ export const disabled = () => ({
   `,
 });
 
-disabled.story = {
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+disabled.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
 export const disabledSimple = () => ({
-  moduleMetadata: modules,
   template: `
     <a
       href="#"
@@ -183,15 +175,13 @@ export const disabledSimple = () => ({
   `,
 });
 
-disabledSimple.story = {
-  name: 'Disabled - Simple',
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+disabledSimple.storyName = 'Disabled - Simple';
+
+disabledSimple.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
 export const disabledLight = () => ({
-  moduleMetadata: modules,
   template: `
     <a
       isDisabled="true"
@@ -206,21 +196,20 @@ export const disabledLight = () => ({
   `,
 });
 
-disabledLight.story = {
-  name: 'Disabled - Light',
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
-  decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box sprk-o-Box--small sprk-u-BackgroundColor--black">${storyContent}<div>`,
-    ),
-  ],
+disabledLight.storyName = 'Disabled - Light';
+
+disabledLight.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
+disabledLight.decorators = [
+  componentWrapperDecorator(
+    (story) =>
+      `<div class="sprk-o-Box sprk-o-Box--small sprk-u-BackgroundColor--black">${story}<div>`,
+  ),
+];
+
 export const disabledIconWithTextLink = () => ({
-  moduleMetadata: modules,
   template: `
     <a
       href="#"
@@ -235,7 +224,8 @@ export const disabledIconWithTextLink = () => ({
         additionalClasses="
           sprk-c-Icon--xl
           sprk-c-Icon--filled-current-color
-          sprk-u-mrs"
+          sprk-b-Link__icon
+        "
       >
       </sprk-icon>
       Back
@@ -243,29 +233,26 @@ export const disabledIconWithTextLink = () => ({
   `,
 });
 
-disabledIconWithTextLink.story = {
-  name: 'Disabled - Icon With Text Link',
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+disabledIconWithTextLink.storyName = 'Disabled - Icon With Text Link';
+
+disabledIconWithTextLink.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
 export const deprecated = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-link
       href="#"
       idString="link-5"
       analyticsString="object.action.event"
     >
-      Deprecated Web Component Link
+      Deprecated Component Link
     </sprk-link>
   `,
 });
 
-deprecated.story = {
-  name: 'Component (Deprecated)',
-  parameters: {
-    jest: ['sprk-link.component'],
-  },
+deprecated.storyName = 'Component (Deprecated)';
+
+deprecated.parameters = {
+  jest: ['sprk-link.directive'],
 };
