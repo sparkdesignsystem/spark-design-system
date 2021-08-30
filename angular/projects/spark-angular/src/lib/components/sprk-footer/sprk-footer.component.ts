@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import {
   ISprkFooterGlobalLink,
   ISprkFooterLocalLinkColumn,
@@ -156,7 +156,7 @@ import {
             </div>
 
             <div
-              *ngIf="socialLinks || appStoreLinksSlot"
+              *ngIf="socialLinks || appSlot"
               class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box"
             >
               <h3
@@ -223,7 +223,7 @@ import {
                     </a>
                   </li>
                 </ul>
-                <ng-content select="[appStoreLinksSlot]"></ng-content>
+                <ng-content select="[app-slot]"></ng-content>
               </div>
             </div>
           </div>
@@ -476,6 +476,9 @@ export class SprkFooterComponent {
    */
   @Input()
   disclaimerToggle: ISprkDisclaimerToggle[];
+
+  @ViewChild('app-slot', { static: false })
+  appSlot: ElementRef;
 
   /**
    * @ignore

@@ -279,7 +279,7 @@ export const defaultStory = () => ({
       <sprk-stack
         itemSpacing="medium"
         splitAt="small"
-        appStoreLinksSlot
+        app-slot
       >
         <div sprkStackItem>
           <a href="#nogo" sprkLink>
