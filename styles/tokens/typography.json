@@ -166,7 +166,7 @@
       "body": {
         "one": {
           "comment": "The font-family, including fallbacks of TypeBodyOne.",
-          "value": "RocketSansMedium, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -175,7 +175,7 @@
         },
         "two": {
           "comment": "The font-family, including fallbacks of TypeBodyTwo.",
-          "value": "RocketSansLight, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -184,7 +184,7 @@
         },
         "three": {
           "comment": "The font-family, including fallbacks of TypeBodyThree.",
-          "value": "RocketSansLight, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -193,7 +193,7 @@
         },
         "four": {
           "comment": "The font-family, including fallbacks of TypeBodyFour.",
-          "value": "RocketSansLight, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
