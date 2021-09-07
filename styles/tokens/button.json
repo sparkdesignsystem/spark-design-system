@@ -82,7 +82,7 @@
       },
       "family": {
         "comment": "The font family of the Button component.",
-        "value": "RocketSansMedium, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+        "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
         "attributes": {
           "category": "font"
         },
