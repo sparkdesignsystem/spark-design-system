@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
-    "@sparkdesignsystem/spark-styles": "^4.0.0",
+    "@sparkdesignsystem/spark-styles": "^4.0.1",
     "dom-slider": "2.1.0",
     "focus-visible": "5.0.2",
     "lodash": "^4.17.21",
