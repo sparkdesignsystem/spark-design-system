@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark",
-  "version": "18.0.0",
+  "version": "18.0.1",
   "description": "Spark is the main package for the Spark Design System. This package contains the JavaScript and components that make up the basic interfaces for Rocket Mortgage Fintech products.",
   "main": "es5/sparkExports.js",
   "scripts": {
