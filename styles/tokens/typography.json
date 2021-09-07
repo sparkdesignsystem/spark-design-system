@@ -471,7 +471,7 @@
         },
         "six": {
           "comment": "The weight of the TypeDisplaySix font.",
-          "value": "500",
+          "value": "300",
           "file": "typography",
           "themable": true
         },
@@ -491,7 +491,7 @@
         },
         "two": {
           "comment": "The weight of the TypeBodyTwo font.",
-          "value": "500",
+          "value": "300",
           "file": "typography",
           "themable": true
         },
