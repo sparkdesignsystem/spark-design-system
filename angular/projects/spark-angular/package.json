@@ -1,7 +1,7 @@
 {
   "name": "@sparkdesignsystem/spark-angular",
   "description": "A collection of Spark Design System components in Angular 6+",
-  "version": "15.0.0",
+  "version": "15.0.1",
   "author": "Rocket Mortgage",
   "license": "MIT",
   "scripts": {
@@ -23,7 +23,7 @@
     "@angular/router": ">=7.0.0 < 11.2.14"
   },
   "dependencies": {
-    "@sparkdesignsystem/spark-styles": "^4.0.0",
+    "@sparkdesignsystem/spark-styles": "^4.0.1",
     "focus-visible": "5.0.2",
     "lodash": "^4.17.21",
     "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9"
