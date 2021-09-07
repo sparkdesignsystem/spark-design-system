@@ -233,7 +233,7 @@ public class SparkDesignTokens {
     public static let sprkDropdownTitleColor = UIColor(red: 0.729, green: 0.729, blue: 0.729, alpha:1)
     public static let sprkDropdownTitleFontSize = CGFloat(16.00)
     public static let sprkDropdownTitleFontWeight = 300
-    public static let sprkBtnFontFamily = "RocketSansMedium, Helvetica, 'Helvetica Neue', Arial, sans-serif"
+    public static let sprkBtnFontFamily = "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif"
     public static let sprkBtnFontSize = "1rem"
     public static let sprkFontFamilyBodyFour = "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif"
     public static let sprkFontFamilyBodyOne = "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif"
