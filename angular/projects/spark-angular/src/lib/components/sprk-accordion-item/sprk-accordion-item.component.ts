@@ -7,7 +7,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
 @Component({
   selector: 'sprk-accordion-item',
   template: `
-    <li [ngClass]="getClasses()">
+    <li [ngClass]="getClasses()" role="listitem">
       <button
         sprkLink
         variant="unstyled"
