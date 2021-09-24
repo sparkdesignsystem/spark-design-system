@@ -431,6 +431,17 @@
           "themable": true
         }
       },
+      "visited":{
+        "border-bottom": {
+          "comment": "The underline style of inline Links on a dark background.",
+          "value": "{link.inline-light.underline.width.value} {link.border.bottom-style.value} {link.inline-light.underline.color.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
       "font-weight": {
         "comment": "The font weight of inline Links on a dark background.",
         "value": "{font.weight.body.two.value}",
@@ -440,15 +451,6 @@
       "border-bottom": {
         "comment": "The underline style of inline Links on a dark background.",
         "value": "{link.inline-light.underline.width.value} {link.border.bottom-style.value} {link.inline-light.underline.color.value}",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "visited-border-bottom": {
-        "comment": "The underline style of visited inline Links on a dark background.",
-        "value": "{link.light.underline.width.value} {link.border.bottom-style.value} {link.light.underline.color.value}",
         "attributes": {
           "category": "content"
         },
