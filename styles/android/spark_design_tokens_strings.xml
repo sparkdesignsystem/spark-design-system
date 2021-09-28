@@ -200,7 +200,7 @@
   <string name="sprk_link_inline_light_hover_border_bottom">2.00dp solid #ffdeb1fd</string><!-- The underline style of inline Links on a dark background on hover. -->
   <string name="sprk_link_inline_light_underline_color">#ffffffff</string><!-- The underline color value of inline Links on a dark background -->
   <string name="sprk_link_inline_light_border_bottom">2.00dp solid #ffffffff</string><!-- The underline style of inline Links on a dark background. -->
-  <string name="sprk_link_inline_light_visited_border_bottom">2.00dp solid transparent</string><!-- The underline style of visited inline Links on a dark background. -->
+  <string name="sprk_link_inline_light_visited_border_bottom">2.00dp solid #ffffffff</string><!-- The underline style of visited inline Links on a dark background. -->
   <string name="sprk_link_plain_border">none</string><!-- The border settings for Plain Links. -->
   <string name="sprk_link_plain_visited_border">none</string><!-- The border settings for Plain Links in the visited state. -->
   <string name="sprk_link_has_icon_transition">0.3s</string><!-- The transition timing for hover, active and focus styles on Links that have icon. -->
