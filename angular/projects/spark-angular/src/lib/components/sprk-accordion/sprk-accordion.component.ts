@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-accordion',
   template: `
-    <ul [ngClass]="getClasses()" [attr.data-id]="idString">
+    <ul [ngClass]="getClasses()" [attr.data-id]="idString" role="list">
       <ng-content></ng-content>
     </ul>
   `,
