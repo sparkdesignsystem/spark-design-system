@@ -257,7 +257,7 @@ export const defaultStory = () => (
           additionalClasses="sprk-c-Footer__text"
           element="p"
         >
-          Sed ut perspiciatis unde omnis iste natus error sit <SprkLink href="#nogo" additionalClasses="sprk-b-Link--inline-light"> inline link </SprkLink> accusantium doloremque laudantiu.
+          Sed et ut perspiciatis unde omnis iste natus error sit <SprkLink href="#nogo" additionalClasses="sprk-b-Link--inline-light"> inline link </SprkLink> accusantium doloremque laudantiu.
         </SprkText>
       </SprkStackItem>
     }
