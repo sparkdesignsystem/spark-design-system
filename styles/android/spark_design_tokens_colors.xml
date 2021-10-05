@@ -75,7 +75,7 @@
   <color name="sprk_footer_link_color">#ffffffff</color><!-- Link color on the Footer. -->
   <color name="sprk_footer_icon_color">#ffffffff</color><!-- Icon color on the Footer. -->
   <color name="sprk_footer_trigger_color">#ffffffff</color><!-- Toggle trigger color on the Footer. -->
-  <color name="sprk_footer_trigger_hover_color">#ffffffff</color><!-- Toggle trigger hover color on the Footer. -->
+  <color name="sprk_footer_trigger_hover_color">#ffdeb1fd</color><!-- Toggle trigger hover color on the Footer. -->
   <color name="sprk_highlight_board_color">#ffffffff</color><!-- The background color of the Highlight Board. -->
   <color name="sprk_highlight_board_content_box_color">#ffffffff</color><!-- The background color of the content box in the Highlight Board. -->
   <color name="sprk_icon_fill_color">#ff1c1b1a</color><!-- Value for the fill property of the Icon component. -->

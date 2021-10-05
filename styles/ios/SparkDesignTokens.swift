@@ -153,7 +153,7 @@ public class SparkDesignTokens {
     public static let sprkFooterLinkColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkFooterTextColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkFooterTriggerColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
-    public static let sprkFooterTriggerHoverColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
+    public static let sprkFooterTriggerHoverColor = UIColor(red: 0.871, green: 0.694, blue: 0.992, alpha:1)
     public static let sprkGray = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
     public static let sprkGreen = UIColor(red: 0.161, green: 0.522, blue: 0.251, alpha:1)
     public static let sprkHighlightBoardColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)

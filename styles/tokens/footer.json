@@ -114,7 +114,7 @@
       "hover": {
         "color": {
           "comment": "Toggle trigger hover color on the Footer.",
-          "value": "{white.value}",
+          "value": "{wisteria.value}",
           "attributes": {
             "category": "color"
           },

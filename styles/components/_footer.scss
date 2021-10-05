@@ -41,6 +41,14 @@
 .sprk-c-Footer__icon {
   fill: $sprk-footer-icon-color;
   color: $sprk-footer-icon-color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    fill: $sprk-footer-trigger-hover-color;
+    stroke: $sprk-footer-trigger-hover-color;
+    transition: $sprk-footer-toggle-transition;
+  }
 }
 
 // Override toggle trigger styles to work on a dark background.
