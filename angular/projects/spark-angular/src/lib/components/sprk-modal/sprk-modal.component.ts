@@ -14,7 +14,7 @@ import { uniqueId } from 'lodash';
       *ngIf="isVisible"
       [ngClass]="getClasses()"
       role="dialog"
-      tabindex="1"
+      tabindex="-1"
       [attr.aria-labelledby]="heading_id"
       aria-modal="true"
       [attr.aria-describedby]="content_id"
