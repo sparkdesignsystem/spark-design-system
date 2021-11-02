@@ -49,7 +49,7 @@ export class SprkSpinnerDirective implements OnInit {
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the element.
    * Intended for an outside
-   * library to capture data.
+   * library to capture data. 
    */
   @HostBinding('attr.data-analytics')
   @Input()
@@ -96,6 +96,13 @@ export class SprkSpinnerDirective implements OnInit {
     this.renderer.setAttribute(
       this.el.nativeElement,
       'aria-valuetext',
+      this.altText,
+    );
+    
+    this.renderer.setAttribute(this.el.nativeElement, 'role', this.role);
+    this.renderer.setAttribute(
+      this.el.nativeElement,
+      'aria-label',
       this.altText,
     );
 
