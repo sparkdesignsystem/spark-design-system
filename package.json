@@ -11,10 +11,11 @@
   "scripts": {
     "build": "npm run prebuild && gatsby build",
     "build-styles": "cd './styles/' && npm install && node build.js",
+    "build-react" : "cd './react' && npm run build",
     "develop": "npm run prebuild && gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "prebuild": "npm run build-styles && npm run clean && npm run sassdoc && npm run sassdocmodifiers && npm run sassdocutilities",
+    "prebuild": "npm run build-styles && npm run clean && npm run sassdoc && npm run sassdocmodifiers && npm run sassdocutilities && npm run build-react",
     "sassdoc": "sassdoc './styles/web/scss/**/_*.scss' --parse > ./src/data/sass-vars.json",
     "clean": "gatsby clean",
     "sassdocmodifiers": "sassdoc './styles/**/_*.scss' --parse > ./src/data/sass-modifiers.json",

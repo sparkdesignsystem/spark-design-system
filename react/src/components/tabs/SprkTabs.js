@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import uniqueId from 'lodash/uniqueId';
 import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
 import SprkTabsButton from './components/SprkTabsButton/SprkTabsButton';
 
@@ -23,7 +22,7 @@ class SprkTabs extends Component {
     this.advanceTab = this.advanceTab.bind(this);
     this.tabsContainerRef = React.createRef();
     const { children } = this.props;
-    const btnIds = children.map(() => uniqueId('tab-'));
+    const btnIds = children.map((_, index) => `tab-${index}`);
     this.state = { btnIds };
   }
 
