@@ -76,6 +76,20 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
               Skip to Main Content
             </SprkLink>
           </div>
+          <aside className="sprk-u-BackgroundColor--black sprk-u-AbsoluteCenter sprk-u-pam">
+            <p className="sprk-u-Color--white">
+              Spark Design System will be retired at the end of 2022. 
+              Feature updates have ended. We'll continue to provide bug 
+              fixes and support until Spark is retired. Questions?
+              Contact 
+              <a
+                href="mailto:SparkDesignSystem@rocketcentral.com"
+                className="docs-c-Banner--link sprk-u-mls"
+              >
+                SparkDesignSystem@rocketcentral.com
+              </a>.
+            </p>
+          </aside>
           <Header
             context={context}
             setContext={setContext}
