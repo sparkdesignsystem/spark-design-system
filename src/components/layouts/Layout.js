@@ -83,10 +83,10 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
               fixes and support until Spark is retired. Questions?
               Contact 
               <a
-                href="mailto:RocketDesignSystem@RocketCentral.com"
+                href="mailto:SparkDesignSystem@rocketcentral.com"
                 className="docs-c-Banner--link sprk-u-mls"
               >
-                RocketDesignSystem@RocketCentral.com
+                SparkDesignSystem@rocketcentral.com
               </a>.
             </p>
           </aside>
