@@ -29,7 +29,7 @@
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
     "@sparkdesignsystem/spark-styles": "^4.0.2",
-    "dom-slider": "2.1.0",
+    "dom-slider": "2.1.6",
     "focus-visible": "5.0.2",
     "lodash": "^4.17.21",
     "lory.js": "^2.5.3",
