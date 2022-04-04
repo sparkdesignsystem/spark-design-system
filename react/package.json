@@ -61,7 +61,7 @@
   "dependencies": {
     "@sparkdesignsystem/spark-styles": "^4.0.2",
     "classnames": "^2.2.6",
-    "focus-visible": "5.0.2",
+    "focus-visible": "5.2.0",
     "lodash.assign": "^4.2.0",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.6.2",
