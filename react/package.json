@@ -64,7 +64,7 @@
     "focus-visible": "5.0.2",
     "lodash.assign": "^4.2.0",
     "lodash.uniqueid": "^4.0.1",
-    "prop-types": "^15.6.2",
+    "prop-types": "^15.8.1",
     "react-animate-height": "^2.0.20",
     "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9",
     "warning": "^4.0.3"
