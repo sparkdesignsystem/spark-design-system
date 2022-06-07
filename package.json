@@ -53,7 +53,7 @@
     "gatsby-image": "^2.2.37",
     "gatsby-plugin-google-analytics": "^2.1.32",
     "gatsby-plugin-manifest": "^2.2.20",
-    "gatsby-plugin-mdx": "^1.0.64",
+    "gatsby-plugin-mdx": "^2.14.1",
     "gatsby-plugin-offline": "^2.2.10",
     "gatsby-plugin-postcss": "^2.1.18",
     "gatsby-plugin-react-helmet": "^3.1.18",
